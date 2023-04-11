@@ -8,6 +8,7 @@
 import Foundation
 
 struct Product: Decodable {
+    let id: UUID
     let category: ProductCategory
     let name: String
     let description: String

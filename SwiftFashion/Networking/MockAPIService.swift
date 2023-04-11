@@ -49,3 +49,9 @@ struct MockAPIService: APIServiceProtocol {
 
     func delete(endpoint: Endpoint) async throws {}
 }
+
+extension MockAPIService {
+    static var preview: MockAPIService {
+        MockAPIService(productJSON: PreviewData.productJSON)
+    }
+}
