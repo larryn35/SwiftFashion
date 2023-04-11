@@ -14,6 +14,9 @@
 		D118FED029E1177200A8EAA2 /* SwiftFashionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D118FECF29E1177200A8EAA2 /* SwiftFashionTests.swift */; };
 		D118FEDA29E1177200A8EAA2 /* SwiftFashionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D118FED929E1177200A8EAA2 /* SwiftFashionUITests.swift */; };
 		D118FEDC29E1177200A8EAA2 /* SwiftFashionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D118FEDB29E1177200A8EAA2 /* SwiftFashionUITestsLaunchTests.swift */; };
+		D19C867229E5307B0033777A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D19C867129E5307B0033777A /* Localizable.strings */; };
+		D19C867729E5318B0033777A /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C867529E5318B0033777A /* XCAssets+Generated.swift */; };
+		D19C867829E5318B0033777A /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C867629E5318B0033777A /* Strings+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		D118FED529E1177200A8EAA2 /* SwiftFashionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftFashionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D118FED929E1177200A8EAA2 /* SwiftFashionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFashionUITests.swift; sourceTree = "<group>"; };
 		D118FEDB29E1177200A8EAA2 /* SwiftFashionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFashionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D19C867129E5307B0033777A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D19C867529E5318B0033777A /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		D19C867629E5318B0033777A /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +102,7 @@
 			children = (
 				D118FEBE29E1177000A8EAA2 /* SwiftFashionApp.swift */,
 				D118FEC029E1177000A8EAA2 /* ContentView.swift */,
-				D118FEC229E1177200A8EAA2 /* Assets.xcassets */,
+				D19C866F29E530520033777A /* Resources */,
 				D118FEC429E1177200A8EAA2 /* Preview Content */,
 			);
 			path = SwiftFashion;
@@ -127,6 +133,25 @@
 			path = SwiftFashionUITests;
 			sourceTree = "<group>";
 		};
+		D19C866F29E530520033777A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D118FEC229E1177200A8EAA2 /* Assets.xcassets */,
+				D19C867129E5307B0033777A /* Localizable.strings */,
+				D19C867029E5305E0033777A /* SwiftGen */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D19C867029E5305E0033777A /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				D19C867629E5318B0033777A /* Strings+Generated.swift */,
+				D19C867529E5318B0033777A /* XCAssets+Generated.swift */,
+			);
+			path = SwiftGen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +162,8 @@
 				D118FEB729E1177000A8EAA2 /* Sources */,
 				D118FEB829E1177000A8EAA2 /* Frameworks */,
 				D118FEB929E1177000A8EAA2 /* Resources */,
+				D19C867329E530970033777A /* SwiftGen */,
+				D19C867429E530A80033777A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -232,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D118FEC629E1177200A8EAA2 /* Preview Assets.xcassets in Resources */,
+				D19C867229E5307B0033777A /* Localizable.strings in Resources */,
 				D118FEC329E1177200A8EAA2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,12 +280,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D19C867329E530970033777A /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftgen >/dev/null; then\n    swiftgen\nelse\n    echo \"warning: SwiftGen not installed, download from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
+		};
+		D19C867429E530A80033777A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D118FEB729E1177000A8EAA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19C867729E5318B0033777A /* XCAssets+Generated.swift in Sources */,
 				D118FEC129E1177000A8EAA2 /* ContentView.swift in Sources */,
+				D19C867829E5318B0033777A /* Strings+Generated.swift in Sources */,
 				D118FEBF29E1177000A8EAA2 /* SwiftFashionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
