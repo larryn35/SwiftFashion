@@ -29,6 +29,11 @@
 		D1DBB94B29E5D12F00EB7FFA /* OrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBB94A29E5D12F00EB7FFA /* OrderTests.swift */; };
 		D1DBB94C29E5D1AB00EB7FFA /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBB94629E5D0CF00EB7FFA /* Order.swift */; };
 		D1DBB94D29E5D1AB00EB7FFA /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBB94829E5D10700EB7FFA /* OrderItem.swift */; };
+		D1DBB95029E5E0D600EB7FFA /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBB94F29E5E0D600EB7FFA /* APIError.swift */; };
+		D1DBB95229E5E0E800EB7FFA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBB95129E5E0E800EB7FFA /* APIService.swift */; };
+		D1DBB95429E5E10300EB7FFA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBB95329E5E10300EB7FFA /* Endpoint.swift */; };
+		D1DBB95629E5E14200EB7FFA /* URLComponents+Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBB95529E5E14200EB7FFA /* URLComponents+Build.swift */; };
+		D1DBB95829E5E16E00EB7FFA /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBB95729E5E16E00EB7FFA /* APIServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,11 @@
 		D1DBB94629E5D0CF00EB7FFA /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		D1DBB94829E5D10700EB7FFA /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
 		D1DBB94A29E5D12F00EB7FFA /* OrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTests.swift; sourceTree = "<group>"; };
+		D1DBB94F29E5E0D600EB7FFA /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		D1DBB95129E5E0E800EB7FFA /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		D1DBB95329E5E10300EB7FFA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		D1DBB95529E5E14200EB7FFA /* URLComponents+Build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+Build.swift"; sourceTree = "<group>"; };
+		D1DBB95729E5E16E00EB7FFA /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +131,7 @@
 			children = (
 				D19C867929E533970033777A /* Models */,
 				D19C867A29E533A20033777A /* Core */,
+				D1DBB94E29E5E0AA00EB7FFA /* Networking */,
 				D19C866F29E530520033777A /* Resources */,
 				D118FEC429E1177200A8EAA2 /* Preview Content */,
 			);
@@ -140,6 +151,7 @@
 			children = (
 				D19C868329E534E70033777A /* ProductTests.swift */,
 				D1DBB94A29E5D12F00EB7FFA /* OrderTests.swift */,
+				D1DBB95729E5E16E00EB7FFA /* APIServiceTests.swift */,
 				D19C868129E5343B0033777A /* TestData.swift */,
 			);
 			path = SwiftFashionTests;
@@ -192,6 +204,17 @@
 				D118FEC029E1177000A8EAA2 /* ContentView.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		D1DBB94E29E5E0AA00EB7FFA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D1DBB94F29E5E0D600EB7FFA /* APIError.swift */,
+				D1DBB95129E5E0E800EB7FFA /* APIService.swift */,
+				D1DBB95329E5E10300EB7FFA /* Endpoint.swift */,
+				D1DBB95529E5E14200EB7FFA /* URLComponents+Build.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,13 +392,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D19C867C29E533BF0033777A /* ProductCategory.swift in Sources */,
+				D1DBB95629E5E14200EB7FFA /* URLComponents+Build.swift in Sources */,
 				D19C867729E5318B0033777A /* XCAssets+Generated.swift in Sources */,
 				D1DBB94929E5D10700EB7FFA /* OrderItem.swift in Sources */,
+				D1DBB95029E5E0D600EB7FFA /* APIError.swift in Sources */,
+				D1DBB95229E5E0E800EB7FFA /* APIService.swift in Sources */,
 				D1DBB94729E5D0CF00EB7FFA /* Order.swift in Sources */,
 				D118FEC129E1177000A8EAA2 /* ContentView.swift in Sources */,
 				D19C867829E5318B0033777A /* Strings+Generated.swift in Sources */,
 				D118FEBF29E1177000A8EAA2 /* SwiftFashionApp.swift in Sources */,
 				D19C867E29E533C60033777A /* Product.swift in Sources */,
+				D1DBB95429E5E10300EB7FFA /* Endpoint.swift in Sources */,
 				D19C868029E533E10033777A /* ColorVariant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +417,7 @@
 				D19C868729E535270033777A /* Product.swift in Sources */,
 				D19C868429E534E70033777A /* ProductTests.swift in Sources */,
 				D1DBB94D29E5D1AB00EB7FFA /* OrderItem.swift in Sources */,
+				D1DBB95829E5E16E00EB7FFA /* APIServiceTests.swift in Sources */,
 				D19C868629E535270033777A /* ProductCategory.swift in Sources */,
 				D1DBB94C29E5D1AB00EB7FFA /* Order.swift in Sources */,
 			);
