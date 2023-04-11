@@ -9,17 +9,10 @@ import XCTest
 @testable import SwiftFashion
 
 final class APIServiceTests: XCTestCase {
-    private let apiService = APIService()
+    private let apiService = MockAPIService(productJSON: TestData.productJSON,
+                                            orderJSON: TestData.orderJSON)
+
     private let orderData = TestData.createOrder()
-
-    override func tearDownWithError() throws {
-        let orderID = try XCTUnwrap(orderData.id)
-
-        Task {
-            let deleteOrderEndpoint = ShoppingEndpoint.deleteOrder(orderID)
-            try await apiService.delete(endpoint: deleteOrderEndpoint)
-        }
-    }
 
     func testProductsCanBeFetchedFromAPI() async throws {
         let endpoint = ShoppingEndpoint.fetchProducts

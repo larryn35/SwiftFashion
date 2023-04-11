@@ -104,6 +104,6 @@ struct APIService: APIServiceProtocol {
 
 protocol APIServiceProtocol {
     func fetch<T: Decodable>(endpoint: Endpoint) async throws -> T
-    func sendData<T: Codable>(endpoint: Endpoint, data: T) async throws -> Data
+    func sendData<Input: Codable, Output: Decodable>(endpoint: Endpoint, data: Input) async throws -> Output
     func delete(endpoint: Endpoint) async throws
 }

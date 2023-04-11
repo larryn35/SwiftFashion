@@ -19,7 +19,6 @@
 		D19C867C29E533BF0033777A /* ProductCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C867B29E533BF0033777A /* ProductCategory.swift */; };
 		D19C867E29E533C60033777A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C867D29E533C60033777A /* Product.swift */; };
 		D19C868029E533E10033777A /* ColorVariant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C867F29E533E10033777A /* ColorVariant.swift */; };
-		D19C868229E5343B0033777A /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C868129E5343B0033777A /* TestData.swift */; };
 		D19C868429E534E70033777A /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C868329E534E70033777A /* ProductTests.swift */; };
 		D19C868529E535270033777A /* ColorVariant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C867F29E533E10033777A /* ColorVariant.swift */; };
 		D19C868629E535270033777A /* ProductCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C867B29E533BF0033777A /* ProductCategory.swift */; };
@@ -34,6 +33,8 @@
 		D1DBB95429E5E10300EB7FFA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBB95329E5E10300EB7FFA /* Endpoint.swift */; };
 		D1DBB95629E5E14200EB7FFA /* URLComponents+Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBB95529E5E14200EB7FFA /* URLComponents+Build.swift */; };
 		D1DBB95829E5E16E00EB7FFA /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBB95729E5E16E00EB7FFA /* APIServiceTests.swift */; };
+		D1DBB95A29E5E5F800EB7FFA /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBB95929E5E5F800EB7FFA /* MockAPIService.swift */; };
+		D1DBB95E29E5EA0D00EB7FFA /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C868129E5343B0033777A /* TestData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		D1DBB95329E5E10300EB7FFA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		D1DBB95529E5E14200EB7FFA /* URLComponents+Build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+Build.swift"; sourceTree = "<group>"; };
 		D1DBB95729E5E16E00EB7FFA /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
+		D1DBB95929E5E5F800EB7FFA /* MockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				D1DBB94F29E5E0D600EB7FFA /* APIError.swift */,
 				D1DBB95129E5E0E800EB7FFA /* APIService.swift */,
 				D1DBB95329E5E10300EB7FFA /* Endpoint.swift */,
+				D1DBB95929E5E5F800EB7FFA /* MockAPIService.swift */,
 				D1DBB95529E5E14200EB7FFA /* URLComponents+Build.swift */,
 			);
 			path = Networking;
@@ -401,6 +404,7 @@
 				D118FEC129E1177000A8EAA2 /* ContentView.swift in Sources */,
 				D19C867829E5318B0033777A /* Strings+Generated.swift in Sources */,
 				D118FEBF29E1177000A8EAA2 /* SwiftFashionApp.swift in Sources */,
+				D1DBB95A29E5E5F800EB7FFA /* MockAPIService.swift in Sources */,
 				D19C867E29E533C60033777A /* Product.swift in Sources */,
 				D1DBB95429E5E10300EB7FFA /* Endpoint.swift in Sources */,
 				D19C868029E533E10033777A /* ColorVariant.swift in Sources */,
@@ -412,9 +416,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1DBB94B29E5D12F00EB7FFA /* OrderTests.swift in Sources */,
-				D19C868229E5343B0033777A /* TestData.swift in Sources */,
 				D19C868529E535270033777A /* ColorVariant.swift in Sources */,
 				D19C868729E535270033777A /* Product.swift in Sources */,
+				D1DBB95E29E5EA0D00EB7FFA /* TestData.swift in Sources */,
 				D19C868429E534E70033777A /* ProductTests.swift in Sources */,
 				D1DBB94D29E5D1AB00EB7FFA /* OrderItem.swift in Sources */,
 				D1DBB95829E5E16E00EB7FFA /* APIServiceTests.swift in Sources */,
