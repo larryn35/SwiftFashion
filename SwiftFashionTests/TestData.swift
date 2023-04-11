@@ -4,10 +4,10 @@
 //
 //  Created by Larry Nguyen on 4/10/23.
 //
+//  swiftlint:disable all
 
 import Foundation
 
-// swiftlint:disable all
 struct TestData {
 
     static let tshirtProduct = Product(category: .tops,
@@ -22,7 +22,64 @@ struct TestData {
                                           hex: "9E8A8A",
                                           image: "tshirt-9E8A8A")
 
+    static func createOrder() -> Order {
+        let orderID = UUID()
+
+        return Order(id: orderID,
+                     customerName: "Tim Apple",
+                     email: "tim@apple.com",
+                     address: "1 Apple Park Way",
+                     city: "Cupertino",
+                     state: "CA",
+                     zip: "95014",
+                     items: [
+                        createShirtOrderItem(for: orderID)
+                     ])
+    }
+
+    static func createShirtOrderItem(for orderID: UUID) -> OrderItem {
+        return OrderItem(orderID: orderID,
+                         name: "T-shirt",
+                         image: "tshirt-6D89C7",
+                         color: "Cerulean Frost",
+                         size: "M",
+                         price: 800,
+                         discount: 200,
+                         quantity: 2)
+    }
+
+
     // MARK: - JSON
+
+    static let orderJSON = """
+    {
+        "address": "1 Apple Park Way",
+        "city": "Cupertino",
+        "customerName": "Tim Apple",
+        "email": "tim@apple.com",
+        "zip": "95014",
+        "total": 1600,
+        "savings": 400,
+        "state": "CA",
+        "items": [
+            {
+                "color": "Cerulean Frost",
+                "quantity": 2,
+                "order": {
+                    "id": "11FF2286-7714-4EE7-93C2-8064A62131C0"
+                },
+                "price": 800,
+                "id": "293ED645-ED3C-4742-AD81-403B0FF999D8",
+                "size": "M",
+                "discount": 200,
+                "image": "tshirt-6D89C7",
+                "createdAt": "2023-04-11T00:00:00Z",
+                "name": "T-shirt"
+            }
+        ]
+    }
+    """
+
     static let productJSON = """
     [
         {
