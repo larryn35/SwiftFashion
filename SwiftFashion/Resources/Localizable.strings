@@ -7,3 +7,12 @@
 */
 
 "appName" = "Swift Fashion";
+
+// SFSymbols
+"sfs.settings" = "slider.horizontal.3";
+
+// HomeTabView
+"home.menu.displaySection" = "Display setting";
+"home.menu.gridButton" = "Grid";
+"home.menu.rowsButton" = "Rows";
+"home.menu.sortSection" = "Sort products";

@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct ColorVariant: Codable {
+struct ColorVariant: Identifiable, Codable {
+    let id: UUID
     let color: String
     let hex: String
     let image: String

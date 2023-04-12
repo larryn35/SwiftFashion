@@ -15,6 +15,22 @@ internal enum L10n {
   /// 
   ///   Created by Larry Nguyen on 4/10/23.
   internal static let appName = L10n.tr("Localizable", "appName", fallback: "Swift Fashion")
+  internal enum Home {
+    internal enum Menu {
+      /// Display setting
+      internal static let displaySection = L10n.tr("Localizable", "home.menu.displaySection", fallback: "Display setting")
+      /// Grid
+      internal static let gridButton = L10n.tr("Localizable", "home.menu.gridButton", fallback: "Grid")
+      /// Rows
+      internal static let rowsButton = L10n.tr("Localizable", "home.menu.rowsButton", fallback: "Rows")
+      /// Sort products
+      internal static let sortSection = L10n.tr("Localizable", "home.menu.sortSection", fallback: "Sort products")
+    }
+  }
+  internal enum Sfs {
+    /// slider.horizontal.3
+    internal static let settings = L10n.tr("Localizable", "sfs.settings", fallback: "slider.horizontal.3")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

@@ -9,19 +9,38 @@ import Foundation
 
 class HomeTabViewModel: ObservableObject {
     @Published var products: [Product] = []
+    var allProducts: [Product] = []
 
     let apiService: APIServiceProtocol
 
     init(apiService: APIServiceProtocol = APIService()) {
         self.apiService = apiService
+        fetchProducts()
     }
 
-    @MainActor
-    func fetchProducts() async {
-        do {
-            products = try await apiService.fetch(endpoint: ShoppingEndpoint.fetchProducts)
-        } catch {
-            print("Unable to fetch products:", error.localizedDescription)
+    func fetchProducts() {
+        Task { @MainActor in
+            do {
+                allProducts = try await apiService.fetch(endpoint: ShoppingEndpoint.fetchProducts)
+                products = allProducts
+            } catch {
+                print("Unable to fetch products:", error.localizedDescription)
+            }
+        }
+    }
+
+    func sortProducts(by type: SortingType) {
+        switch type {
+        case .newest:
+            products = allProducts
+        case .lowToHigh:
+            products = allProducts.sorted(by: { $0.currentPrice < $1.currentPrice })
+        case .highToLow:
+            products = allProducts.sorted(by: { $0.currentPrice > $1.currentPrice })
+        case .aToZ:
+            products = allProducts.sorted(by: { $0.name < $1.name })
+        case .zToA:
+            products = allProducts.sorted(by: { $0.name > $1.name })
         }
     }
 }

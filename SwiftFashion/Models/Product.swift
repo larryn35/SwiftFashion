@@ -17,3 +17,21 @@ struct Product: Decodable {
     let sizes: [String]
     let variants: [ColorVariant]
 }
+
+extension Product: Identifiable {
+    var defaultImage: String {
+        variants.first?.image ?? "unavailable"
+    }
+
+    var currentPrice: Double {
+        Double(price - discount) / 100
+    }
+
+    var originalPrice: Double? {
+        if discount == 0 {
+            return nil
+        } else {
+            return Double(price) / 100
+        }
+    }
+}

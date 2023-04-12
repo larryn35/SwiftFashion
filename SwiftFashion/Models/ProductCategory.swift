@@ -19,3 +19,9 @@ enum ProductCategory: String, Decodable {
         self = ProductCategory(rawValue: value) ?? .all
     }
 }
+
+extension ProductCategory: Identifiable, CaseIterable {
+    var id: String {
+        self.rawValue
+    }
+}

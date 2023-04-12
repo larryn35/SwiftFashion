@@ -10,6 +10,12 @@
 import Foundation
 
 struct PreviewData {
+    static func products() -> [Product] {
+        let jsonData = productJSON.data(using: .utf8)!
+        let products = try? JSONDecoder().decode([Product].self, from: jsonData)
+        return products ?? []
+    }
+
     static let productJSON = """
     [
         {
