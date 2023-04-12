@@ -10,15 +10,18 @@ import Foundation
 
 struct TestData {
 
-    static let tshirtProduct = Product(category: .tops,
+    static let tshirtProduct = Product(id: UUID(),
+                                       category: .tops,
                                        name: "T-shirt",
                                        description: "Introducing our classic and versatile t-shirt, perfect for any occasion. Made with soft and comfortable cotton, this t-shirt is lightweight and breathable, ensuring all-day comfort.",
                                        price: 1200,
                                        discount: 240,
                                        sizes: ["S", "M", "L"],
-                                       variants: [grayVariant])
-
-    static let grayVariant = ColorVariant(color: "Dusty Gray",
+                                       variants: [grayVariant],
+                                       updatedAt: Date())
+    
+    static let grayVariant = ColorVariant(id: UUID(),
+                                          color: "Dusty Gray",
                                           hex: "9E8A8A",
                                           image: "tshirt-9E8A8A")
 
@@ -88,40 +91,41 @@ struct TestData {
                 {
                     "color": "Dusty Gray",
                     "product": {
-                        "id": "52256004-55E2-4042-A3B6-ACB8F139E86B"
+                        "id": "3AF45568-7ADE-412F-9ED6-7A6192958C03"
                     },
-                    "id": "0276AF58-2637-4650-93C7-76D4A6BA3EF2",
+                    "id": "E9BE2566-2234-451B-B452-CCAE21678975",
                     "hex": "9E8A8A",
                     "image": "tshirt-9E8A8A",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Tan Hide",
                     "product": {
-                        "id": "52256004-55E2-4042-A3B6-ACB8F139E86B"
+                        "id": "3AF45568-7ADE-412F-9ED6-7A6192958C03"
                     },
-                    "id": "E6448A99-C879-4AD9-BD80-140F1F05AB6C",
+                    "id": "B30F7B69-7DB2-41D9-93AF-2F61457BF700",
                     "hex": "FC9C5E",
                     "image": "tshirt-FC9C5E",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Pickled Bluewood",
                     "product": {
-                        "id": "52256004-55E2-4042-A3B6-ACB8F139E86B"
+                        "id": "3AF45568-7ADE-412F-9ED6-7A6192958C03"
                     },
-                    "id": "7FB4D081-470E-4A9B-96A2-44924B3D0D24",
+                    "id": "64E9FE4C-32E1-4A7B-8176-1322693A944B",
                     "hex": "35455E",
                     "image": "tshirt-35455E",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "52256004-55E2-4042-A3B6-ACB8F139E86B",
+            "id": "3AF45568-7ADE-412F-9ED6-7A6192958C03",
             "price": 1200,
             "discount": 240,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -134,42 +138,43 @@ struct TestData {
             "category": "tops",
             "variants": [
                 {
-                    "color": "Scooter",
                     "product": {
-                        "id": "7CF81866-61C0-423D-AF80-E1D0410E121A"
+                        "id": "DB14FC0D-C863-40CA-9233-065F85DD121D"
                     },
-                    "id": "933CA3DA-9653-4C3B-84A9-068D6084175D",
+                    "color": "Scooter",
+                    "id": "37800282-16ED-4F57-ADC0-7BF41644AB36",
                     "hex": "3DBADA",
                     "image": "tanktop-3DBADA",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
-                    "color": "Emerald",
                     "product": {
-                        "id": "7CF81866-61C0-423D-AF80-E1D0410E121A"
+                        "id": "DB14FC0D-C863-40CA-9233-065F85DD121D"
                     },
-                    "id": "24894387-876B-4D44-9D0B-FCEAA5505A02",
+                    "color": "Emerald",
+                    "id": "F145CA63-A622-403C-89DB-F8E5FE78272C",
                     "hex": "4EC67C",
                     "image": "tanktop-4EC67C",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
-                    "color": "Sunglow",
                     "product": {
-                        "id": "7CF81866-61C0-423D-AF80-E1D0410E121A"
+                        "id": "DB14FC0D-C863-40CA-9233-065F85DD121D"
                     },
-                    "id": "EDF34CF8-932E-491A-B78C-26A6AC26F68A",
+                    "color": "Sunglow",
+                    "id": "A4DFF352-3FB2-4FC0-AA1C-EC0C96B7EFA1",
                     "hex": "FDD54F",
                     "image": "tanktop-FDD54F",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "7CF81866-61C0-423D-AF80-E1D0410E121A",
+            "id": "DB14FC0D-C863-40CA-9233-065F85DD121D",
             "price": 800,
             "discount": 160,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -182,31 +187,32 @@ struct TestData {
             "category": "tops",
             "variants": [
                 {
-                    "color": "Emerald",
                     "product": {
-                        "id": "25AB8D0B-4062-4612-A4F1-A6806DC5897E"
+                        "id": "5CBED5B5-1F8A-40DF-BFE6-0CABE27EE65B"
                     },
-                    "id": "2D9FC4A7-ABAE-4573-978E-F05EDE6DD1B0",
+                    "color": "Emerald",
+                    "id": "69BB4C2D-69E3-4CA8-8546-7DEDFBD9073D",
                     "hex": "4EC67C",
                     "image": "polo-4EC67C",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
-                    "color": "Abbey",
                     "product": {
-                        "id": "25AB8D0B-4062-4612-A4F1-A6806DC5897E"
+                        "id": "5CBED5B5-1F8A-40DF-BFE6-0CABE27EE65B"
                     },
-                    "id": "82269049-3023-4463-A3D7-090320F409A8",
+                    "color": "Abbey",
+                    "id": "6AB9D51B-3D77-4B65-B3E3-B0D1023F1253",
                     "hex": "44464A",
                     "image": "polo-44464A",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "25AB8D0B-4062-4612-A4F1-A6806DC5897E",
+            "id": "5CBED5B5-1F8A-40DF-BFE6-0CABE27EE65B",
             "price": 1600,
             "discount": 320,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -221,40 +227,41 @@ struct TestData {
                 {
                     "color": "Shuttle Gray",
                     "product": {
-                        "id": "B0DA5875-9682-442C-841B-3BEB3ED8431D"
+                        "id": "7D3AB13E-0FEA-426C-ACA6-EA662EB20C14"
                     },
-                    "id": "ED181BA7-7D18-4EDB-B4C9-3168F9B95F65",
+                    "id": "847980AE-C612-47C5-A0D0-1193311A4F3E",
                     "hex": "65676C",
                     "image": "turtleneck-65676C",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Blueberry",
                     "product": {
-                        "id": "B0DA5875-9682-442C-841B-3BEB3ED8431D"
+                        "id": "7D3AB13E-0FEA-426C-ACA6-EA662EB20C14"
                     },
-                    "id": "EA6739D3-F434-4434-B033-21A5102636DF",
+                    "id": "F77F514C-C3E6-487F-AB96-A6158206E5E7",
                     "hex": "745EFC",
                     "image": "turtleneck-745EFC",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Ghost",
                     "product": {
-                        "id": "B0DA5875-9682-442C-841B-3BEB3ED8431D"
+                        "id": "7D3AB13E-0FEA-426C-ACA6-EA662EB20C14"
                     },
-                    "id": "017BE9BA-B844-4198-8ACB-BD2F341023AD",
+                    "id": "680E3459-61C8-48B1-AAAA-A5D85379FD1A",
                     "hex": "CAC8D8",
                     "image": "turtleneck-CAC8D8",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "B0DA5875-9682-442C-841B-3BEB3ED8431D",
+            "id": "7D3AB13E-0FEA-426C-ACA6-EA662EB20C14",
             "price": 2800,
             "discount": 560,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -269,51 +276,52 @@ struct TestData {
                 {
                     "color": "Chestnut Rose",
                     "product": {
-                        "id": "C2E79AAB-C86D-4827-A193-0943F324AC67"
+                        "id": "5381A415-FDE0-4B09-B686-BE14393B6244"
                     },
-                    "id": "53C3F979-C728-4E42-9201-29383D79B00B",
+                    "id": "5FCAC68D-D7BC-4451-9F52-AF08356DCF44",
                     "hex": "CC4F60",
                     "image": "jersey-CC4F60",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Indigo",
                     "product": {
-                        "id": "C2E79AAB-C86D-4827-A193-0943F324AC67"
+                        "id": "5381A415-FDE0-4B09-B686-BE14393B6244"
                     },
-                    "id": "B9F21712-6367-4690-8A1C-DCF9525D3AA2",
+                    "id": "F2790EA9-BD1F-438E-9550-74E6C6629C98",
                     "hex": "4F72CC",
                     "image": "jersey-4F72CC",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Fuchsia",
                     "product": {
-                        "id": "C2E79AAB-C86D-4827-A193-0943F324AC67"
+                        "id": "5381A415-FDE0-4B09-B686-BE14393B6244"
                     },
-                    "id": "0D81C76F-23C8-4A05-8258-548ED67E8EA5",
+                    "id": "8276993D-9DAE-4F3F-87BF-895A517A0251",
                     "hex": "C94FCC",
                     "image": "jersey-C94FCC",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Persian Plum",
                     "product": {
-                        "id": "C2E79AAB-C86D-4827-A193-0943F324AC67"
+                        "id": "5381A415-FDE0-4B09-B686-BE14393B6244"
                     },
-                    "id": "44EF11D2-48BE-40A4-9DC8-C10BEB2307E8",
+                    "id": "88BB58E1-CDDD-421E-8516-75117CA8C04F",
                     "hex": "661A24",
                     "image": "jersey-661A24",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "C2E79AAB-C86D-4827-A193-0943F324AC67",
+            "id": "5381A415-FDE0-4B09-B686-BE14393B6244",
             "price": 1600,
             "discount": 320,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -329,29 +337,30 @@ struct TestData {
                 {
                     "color": "Shuttle Gray",
                     "product": {
-                        "id": "B2F81337-9BA4-42F7-9019-3DDFB35ECF51"
+                        "id": "3D5EDBCB-C988-43A6-99AA-23D3E72EAAE3"
                     },
-                    "id": "3EEB1404-F536-42A0-989C-89287CFA710C",
+                    "id": "8AFAA8C3-4D46-4481-85E9-2AF341CFA517",
                     "hex": "65676C",
                     "image": "signaturepolo-65676C",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Kashmir Blue",
                     "product": {
-                        "id": "B2F81337-9BA4-42F7-9019-3DDFB35ECF51"
+                        "id": "3D5EDBCB-C988-43A6-99AA-23D3E72EAAE3"
                     },
-                    "id": "65D694F2-C8F9-4563-AB3A-FC21CFC704E0",
+                    "id": "D9FCB262-0982-4BF6-9487-DF87B3E22985",
                     "hex": "526594",
                     "image": "signaturepolo-526594",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "B2F81337-9BA4-42F7-9019-3DDFB35ECF51",
+            "id": "3D5EDBCB-C988-43A6-99AA-23D3E72EAAE3",
             "price": 3200,
             "discount": 640,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -366,51 +375,52 @@ struct TestData {
                 {
                     "color": "Emerald",
                     "product": {
-                        "id": "97DF505C-A983-4E54-A354-DAC6E954F4FB"
+                        "id": "2A77F09A-CF68-4695-B10B-928FED78CD94"
                     },
-                    "id": "D117058E-5359-4B88-ABA6-90C1CBEFC713",
+                    "id": "79BB006F-0A0B-4927-985E-C9B3B47704B5",
                     "hex": "4EC67C",
                     "image": "atheletictank-4EC67C",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Purple Heart",
                     "product": {
-                        "id": "97DF505C-A983-4E54-A354-DAC6E954F4FB"
+                        "id": "2A77F09A-CF68-4695-B10B-928FED78CD94"
                     },
-                    "id": "4A331743-B05D-4904-8AD3-77CF9FDA7F69",
+                    "id": "ACEAAD09-673E-4279-A110-69B048B0FA8A",
                     "hex": "6D4EC6",
                     "image": "atheletictank-6D4EC6",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Mine Shaft",
                     "product": {
-                        "id": "97DF505C-A983-4E54-A354-DAC6E954F4FB"
+                        "id": "2A77F09A-CF68-4695-B10B-928FED78CD94"
                     },
-                    "id": "2C623394-2E03-4318-9094-561E370EEC2F",
+                    "id": "80F1B361-674E-4D84-B3A2-61568A9B0C4E",
                     "hex": "303030",
                     "image": "atheletictank-303030",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Flamenco",
                     "product": {
-                        "id": "97DF505C-A983-4E54-A354-DAC6E954F4FB"
+                        "id": "2A77F09A-CF68-4695-B10B-928FED78CD94"
                     },
-                    "id": "5D84E423-D270-4FC1-9874-86DB4982BB60",
+                    "id": "1F5AD3F5-3CAD-4233-A112-10682F126F0A",
                     "hex": "FE800C",
                     "image": "atheletictank-FE800C",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "97DF505C-A983-4E54-A354-DAC6E954F4FB",
+            "id": "2A77F09A-CF68-4695-B10B-928FED78CD94",
             "price": 2000,
             "discount": 400,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -425,29 +435,30 @@ struct TestData {
                 {
                     "color": "Chestnut Rose",
                     "product": {
-                        "id": "4042D99D-A825-4D96-91A8-FA8237EFB282"
+                        "id": "79B5CBB8-CCDD-4D70-AD36-1EB59793BCF8"
                     },
-                    "id": "5A317CAF-1C7E-41C4-B9DD-F96E3C80C2B5",
+                    "id": "F901791C-2491-4D9C-95CC-596588E6BB3D",
                     "hex": "CC4F60",
                     "image": "sweater-CC4F60",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Pastel Green",
                     "product": {
-                        "id": "4042D99D-A825-4D96-91A8-FA8237EFB282"
+                        "id": "79B5CBB8-CCDD-4D70-AD36-1EB59793BCF8"
                     },
-                    "id": "F495BFDA-0CD7-4569-985B-7C59548654F0",
+                    "id": "870AC49B-6515-4134-BB94-37C83E5EC06A",
                     "hex": "7EE288",
                     "image": "sweater-7EE288",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "4042D99D-A825-4D96-91A8-FA8237EFB282",
+            "id": "79B5CBB8-CCDD-4D70-AD36-1EB59793BCF8",
             "price": 2500,
             "discount": 500,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -462,29 +473,30 @@ struct TestData {
                 {
                     "color": "Cabaret",
                     "product": {
-                        "id": "773936D3-F14F-4C41-A3A5-EDB2C7FCD287"
+                        "id": "21BC866A-A3C9-4FF8-84FC-09A528A4EE73"
                     },
-                    "id": "969ABB48-13F9-46A7-9281-A71CDBE82694",
+                    "id": "339EF305-EB89-4FCC-95E0-0A87C582061A",
                     "hex": "D83E63",
                     "image": "swimmingshorts-D83E63",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Turquoise Pearl",
                     "product": {
-                        "id": "773936D3-F14F-4C41-A3A5-EDB2C7FCD287"
+                        "id": "21BC866A-A3C9-4FF8-84FC-09A528A4EE73"
                     },
-                    "id": "E5A2243F-C0FE-4673-A48D-D7F6656524BA",
+                    "id": "99357105-2604-44A5-8566-E245FB938747",
                     "hex": "3EBBD8",
                     "image": "swimmingshorts-3EBBD8",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "773936D3-F14F-4C41-A3A5-EDB2C7FCD287",
+            "id": "21BC866A-A3C9-4FF8-84FC-09A528A4EE73",
             "price": 900,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -499,29 +511,30 @@ struct TestData {
                 {
                     "color": "Hemp",
                     "product": {
-                        "id": "8B2F3C43-4328-4E79-8E2F-57BBA6BBE5A1"
+                        "id": "E42FD56E-9A95-487A-A742-E82AF2559F8E"
                     },
-                    "id": "8D7FDBF0-F5B7-42F6-9BB1-AEDD02F962F7",
+                    "id": "99F22958-3812-4853-AA9B-16F2FA22837E",
                     "hex": "8D746F",
                     "image": "shorts-8D746F",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Mineral Green",
                     "product": {
-                        "id": "8B2F3C43-4328-4E79-8E2F-57BBA6BBE5A1"
+                        "id": "E42FD56E-9A95-487A-A742-E82AF2559F8E"
                     },
-                    "id": "C626EFE2-AE09-4421-A12A-B94B45B0830B",
+                    "id": "BF1943D3-A419-48DB-9679-17D95CE8A311",
                     "hex": "455E55",
                     "image": "shorts-455E55",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "8B2F3C43-4328-4E79-8E2F-57BBA6BBE5A1",
+            "id": "E42FD56E-9A95-487A-A742-E82AF2559F8E",
             "price": 1200,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -536,40 +549,41 @@ struct TestData {
                 {
                     "color": "San Juan",
                     "product": {
-                        "id": "A307C8A6-50FA-4EFD-AC93-CF23C65B56B6"
+                        "id": "0AA74C3D-8D0F-436A-A805-9CCB20FCE275"
                     },
-                    "id": "85AF6BAA-E502-419E-8E8B-A6BD2675DE5E",
+                    "id": "8C66C108-6096-448F-B880-1B635757E62A",
                     "hex": "314077",
                     "image": "stripedpants-314077",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Spectra",
                     "product": {
-                        "id": "A307C8A6-50FA-4EFD-AC93-CF23C65B56B6"
+                        "id": "0AA74C3D-8D0F-436A-A805-9CCB20FCE275"
                     },
-                    "id": "98B01E40-A797-42AD-825F-9044E093139E",
+                    "id": "564792FF-DEC3-4D6E-A27F-9113D0DDFF92",
                     "hex": "2B5853",
                     "image": "stripedpants-2B5853",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Roof Terracotta",
                     "product": {
-                        "id": "A307C8A6-50FA-4EFD-AC93-CF23C65B56B6"
+                        "id": "0AA74C3D-8D0F-436A-A805-9CCB20FCE275"
                     },
-                    "id": "459F3540-5032-4F3F-83BD-2CA5D30B05C9",
+                    "id": "FCB2FA61-1D17-4C77-AD5F-75FCE65E9409",
                     "hex": "AD2020",
                     "image": "stripedpants-AD2020",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "A307C8A6-50FA-4EFD-AC93-CF23C65B56B6",
+            "id": "0AA74C3D-8D0F-436A-A805-9CCB20FCE275",
             "price": 1800,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -584,29 +598,30 @@ struct TestData {
                 {
                     "color": "Horizon",
                     "product": {
-                        "id": "89B15065-443B-4761-846A-86338E7759D7"
+                        "id": "8CA0B832-5114-492E-9164-F9B6FCC9072E"
                     },
-                    "id": "B16FA45F-37DC-43AA-A74B-C3A490C6895C",
+                    "id": "151CB4ED-1409-4FE6-92E0-4FB9D59E5731",
                     "hex": "5F86A1",
                     "image": "fittedpants-5F86A1",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Amethyst",
                     "product": {
-                        "id": "89B15065-443B-4761-846A-86338E7759D7"
+                        "id": "8CA0B832-5114-492E-9164-F9B6FCC9072E"
                     },
-                    "id": "D3CF1A40-0A53-4CEC-95BF-D503660864B1",
+                    "id": "2F87BDF3-FDBB-4D39-9659-310E64F48AD2",
                     "hex": "9368C9",
                     "image": "fittedpants-9368C9",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "89B15065-443B-4761-846A-86338E7759D7",
+            "id": "8CA0B832-5114-492E-9164-F9B6FCC9072E",
             "price": 2800,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "XS",
                 "S",
@@ -622,40 +637,41 @@ struct TestData {
                 {
                     "color": "Scooter",
                     "product": {
-                        "id": "4C41E4E5-47EE-409E-AAAE-4CDED19C83B4"
+                        "id": "E2E74671-24D6-4564-A0E2-D016329B21E7"
                     },
-                    "id": "6F9DEA6E-14BA-4E55-A1B9-B3C1C9CE3269",
+                    "id": "88383E64-F28F-4B75-AC71-FC5DE469741C",
                     "hex": "3DBADA",
                     "image": "sweatpants-3DBADA",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Pastel Green",
                     "product": {
-                        "id": "4C41E4E5-47EE-409E-AAAE-4CDED19C83B4"
+                        "id": "E2E74671-24D6-4564-A0E2-D016329B21E7"
                     },
-                    "id": "D8490987-6AD7-4B7E-9070-788FA0DF592B",
+                    "id": "91C961C7-B039-4DF9-AD5C-A81CB64F44A2",
                     "hex": "82D67D",
                     "image": "sweatpants-82D67D",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Antique Brass",
                     "product": {
-                        "id": "4C41E4E5-47EE-409E-AAAE-4CDED19C83B4"
+                        "id": "E2E74671-24D6-4564-A0E2-D016329B21E7"
                     },
-                    "id": "F5004495-764B-42FC-B8FF-E5C182D5340D",
+                    "id": "D1E81E91-93AF-4FC8-956B-CB7200B208A5",
                     "hex": "CC9461",
                     "image": "sweatpants-CC9461",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "4C41E4E5-47EE-409E-AAAE-4CDED19C83B4",
+            "id": "E2E74671-24D6-4564-A0E2-D016329B21E7",
             "price": 1400,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -670,51 +686,52 @@ struct TestData {
                 {
                     "color": "Hemlock",
                     "product": {
-                        "id": "44191A22-F732-4FB8-A9DE-4F05269BC951"
+                        "id": "EEBD5CFF-D842-4B43-B892-1BD5F0D1406F"
                     },
-                    "id": "835FE8A0-279F-4FFB-A221-47AACCB5E0FB",
+                    "id": "DAD3A404-66D9-4B3E-8532-E8912FF6E869",
                     "hex": "5E563C",
                     "image": "pants-5E563C",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Black Coral Pearl",
                     "product": {
-                        "id": "44191A22-F732-4FB8-A9DE-4F05269BC951"
+                        "id": "EEBD5CFF-D842-4B43-B892-1BD5F0D1406F"
                     },
-                    "id": "27CF4CB3-B072-4453-9240-1E449546BBD4",
+                    "id": "BCF813AC-F001-4514-9FE1-942FB70EA551",
                     "hex": "555D68",
                     "image": "pants-555D68",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Kashmir Blue",
                     "product": {
-                        "id": "44191A22-F732-4FB8-A9DE-4F05269BC951"
+                        "id": "EEBD5CFF-D842-4B43-B892-1BD5F0D1406F"
                     },
-                    "id": "FED36C87-3085-48A4-80DD-706574188724",
+                    "id": "A9A2A1F6-33D3-4134-8398-C24C5E29BCBB",
                     "hex": "496998",
                     "image": "pants-496998",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Pine",
                     "product": {
-                        "id": "44191A22-F732-4FB8-A9DE-4F05269BC951"
+                        "id": "EEBD5CFF-D842-4B43-B892-1BD5F0D1406F"
                     },
-                    "id": "1CE7D0D1-6BD2-4F6D-8D6C-BBE82F92A3FC",
+                    "id": "778A6DF4-5863-4E11-B4E9-0E5F04AE2DF8",
                     "hex": "4AA483",
                     "image": "pants-4AA483",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "44191A22-F732-4FB8-A9DE-4F05269BC951",
+            "id": "EEBD5CFF-D842-4B43-B892-1BD5F0D1406F",
             "price": 2200,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -730,29 +747,30 @@ struct TestData {
                 {
                     "color": "Emerald",
                     "product": {
-                        "id": "69CEB8EE-2B30-473E-B956-2FE86F52D9C1"
+                        "id": "683B46BB-879B-424E-B2FE-D8576BA7FBE4"
                     },
-                    "id": "2AF4E2FA-3C26-498F-B941-8758C596F44A",
+                    "id": "B7D22346-9D75-4355-90CC-C3FB30DD2E67",
                     "hex": "4EC67C",
                     "image": "sundress-4EC67C",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Bright Sun",
                     "product": {
-                        "id": "69CEB8EE-2B30-473E-B956-2FE86F52D9C1"
+                        "id": "683B46BB-879B-424E-B2FE-D8576BA7FBE4"
                     },
-                    "id": "433024EC-0104-4FF8-8ABA-5AF363CF0F22",
+                    "id": "CB6DAB89-7E19-4E1D-B995-B3CD90E4B432",
                     "hex": "FFD53E",
                     "image": "sundress-FFD53E",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "69CEB8EE-2B30-473E-B956-2FE86F52D9C1",
+            "id": "683B46BB-879B-424E-B2FE-D8576BA7FBE4",
             "price": 2000,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -768,29 +786,30 @@ struct TestData {
                 {
                     "color": "Melrose",
                     "product": {
-                        "id": "C6EDEF70-CE71-4AA7-9B7C-324BBF00AD1C"
+                        "id": "8937591E-B5E1-4B70-AA7B-7E7FD42C21F9"
                     },
-                    "id": "FFFE1C73-160C-4AB3-9393-7DB3E3B60827",
+                    "id": "AFC9EA6C-EC78-4D35-BBE0-1A4ACA655C4C",
                     "hex": "94A5FF",
                     "image": "longsleevedress-94A5FF",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Bright Sun",
                     "product": {
-                        "id": "C6EDEF70-CE71-4AA7-9B7C-324BBF00AD1C"
+                        "id": "8937591E-B5E1-4B70-AA7B-7E7FD42C21F9"
                     },
-                    "id": "34516489-C4A3-46EA-9E97-54962498E015",
+                    "id": "737CDD70-03A0-4841-BF83-483C0A7FD26C",
                     "hex": "FFD53E",
                     "image": "longsleevedress-FFD53E",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "C6EDEF70-CE71-4AA7-9B7C-324BBF00AD1C",
+            "id": "8937591E-B5E1-4B70-AA7B-7E7FD42C21F9",
             "price": 2600,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -805,40 +824,41 @@ struct TestData {
                 {
                     "color": "Alto",
                     "product": {
-                        "id": "547149E5-EC2C-4BC6-B4E8-5EA162FBF0DD"
+                        "id": "97202E58-CD43-4092-9CAE-E4E2DA835A2F"
                     },
-                    "id": "C2A70F88-344F-44C0-8047-510EEF08EC14",
+                    "id": "8B8985B4-A063-4FBB-AE3C-71B38B27FA11",
                     "hex": "E0E0E0",
                     "image": "dress-E0E0E0",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Geraldine",
                     "product": {
-                        "id": "547149E5-EC2C-4BC6-B4E8-5EA162FBF0DD"
+                        "id": "97202E58-CD43-4092-9CAE-E4E2DA835A2F"
                     },
-                    "id": "7C923544-FAF4-4F78-A5E7-0C06B7E7C534",
+                    "id": "C3373686-3398-4F03-A38E-6AA7079291D5",
                     "hex": "FB9C87",
                     "image": "dress-FB9C87",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Scooter",
                     "product": {
-                        "id": "547149E5-EC2C-4BC6-B4E8-5EA162FBF0DD"
+                        "id": "97202E58-CD43-4092-9CAE-E4E2DA835A2F"
                     },
-                    "id": "D8B1D733-BF88-4C1F-8A20-C28AC3519342",
+                    "id": "6EB2CEE3-9AD4-4074-B95E-D502078DE549",
                     "hex": "3DBADA",
                     "image": "dress-3DBADA",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "547149E5-EC2C-4BC6-B4E8-5EA162FBF0DD",
+            "id": "97202E58-CD43-4092-9CAE-E4E2DA835A2F",
             "price": 2000,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -853,40 +873,41 @@ struct TestData {
                 {
                     "color": "Chestnut Rose",
                     "product": {
-                        "id": "8D8F9724-4B6A-42AF-A876-3590579D3039"
+                        "id": "965CCE25-A650-4038-AC76-5D355C07A355"
                     },
-                    "id": "1536BDE7-8F1B-4B8A-844D-CED8A7E01474",
+                    "id": "2EB3B301-00C8-478A-863A-0479B464A714",
                     "hex": "CB525F",
                     "image": "cocktaildress-CB525F",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Butterfly Bush",
                     "product": {
-                        "id": "8D8F9724-4B6A-42AF-A876-3590579D3039"
+                        "id": "965CCE25-A650-4038-AC76-5D355C07A355"
                     },
-                    "id": "BC866D19-D7E4-4B16-8955-30BE4CFCE2F9",
+                    "id": "7CFACAC4-4C75-4B73-ACBE-080877672436",
                     "hex": "4F58A1",
                     "image": "cocktaildress-4F58A1",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
                     "color": "Cutty Sark",
                     "product": {
-                        "id": "8D8F9724-4B6A-42AF-A876-3590579D3039"
+                        "id": "965CCE25-A650-4038-AC76-5D355C07A355"
                     },
-                    "id": "EBBD6A8D-D553-4B5C-8DCA-349C8C9F9740",
+                    "id": "4E2BA1AD-8971-4F64-B180-46AAF4847939",
                     "hex": "497673",
                     "image": "cocktaildress-497673",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "8D8F9724-4B6A-42AF-A876-3590579D3039",
+            "id": "965CCE25-A650-4038-AC76-5D355C07A355",
             "price": 2200,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -901,40 +922,41 @@ struct TestData {
                 {
                     "color": "Emerald",
                     "product": {
-                        "id": "ED5DAAB1-1152-4A79-8EB2-ADA0A0476AF5"
+                        "id": "3120E708-A003-4865-9B28-F408C1A8117C"
                     },
-                    "id": "492A5DFF-51A9-4BC9-AC6B-C9B1CAD5952E",
+                    "id": "E1F60FEA-CFF5-4708-8DF9-2F73C1914DD5",
                     "hex": "57C983",
                     "image": "lowtops-57C983",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
-                    "color": "New Car",
                     "product": {
-                        "id": "ED5DAAB1-1152-4A79-8EB2-ADA0A0476AF5"
+                        "id": "3120E708-A003-4865-9B28-F408C1A8117C"
                     },
-                    "id": "C68AA49B-01D1-4A39-A938-37F777D3B8EE",
+                    "color": "New Car",
+                    "id": "C3D327FB-EC45-40E5-BF9C-FD397BB5F07F",
                     "hex": "215DB8",
                     "image": "lowtops-215DB8",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
-                    "color": "Medium Purple",
                     "product": {
-                        "id": "ED5DAAB1-1152-4A79-8EB2-ADA0A0476AF5"
+                        "id": "3120E708-A003-4865-9B28-F408C1A8117C"
                     },
-                    "id": "E61BAD7D-264C-407F-9308-8F4E67AB0753",
+                    "color": "Medium Purple",
+                    "id": "4950FA50-A798-4CD1-8627-E389979174EE",
                     "hex": "9251E3",
                     "image": "lowtops-9251E3",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "ED5DAAB1-1152-4A79-8EB2-ADA0A0476AF5",
+            "id": "3120E708-A003-4865-9B28-F408C1A8117C",
             "price": 4200,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "8",
                 "9",
@@ -949,31 +971,32 @@ struct TestData {
             "category": "footwear",
             "variants": [
                 {
-                    "color": "Chambray",
                     "product": {
-                        "id": "EF763A9B-99B1-4FD6-B187-BD6833D37136"
+                        "id": "6D051559-C48F-4BBE-AD72-5031CC5C33CE"
                     },
-                    "id": "4F2D07A1-FC93-4A0B-BCEC-8C1726626659",
+                    "color": "Chambray",
+                    "id": "D0CAA96B-7055-46FD-9743-693A5C436F20",
                     "hex": "3A3E99",
                     "image": "heels-3A3E99",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
-                    "color": "Tall Poppy",
                     "product": {
-                        "id": "EF763A9B-99B1-4FD6-B187-BD6833D37136"
+                        "id": "6D051559-C48F-4BBE-AD72-5031CC5C33CE"
                     },
-                    "id": "3D49D88D-8313-4252-BEA7-FCE9A040484B",
+                    "color": "Tall Poppy",
+                    "id": "4908A0BA-E610-4C80-B787-0299BB210277",
                     "hex": "B42837",
                     "image": "heels-B42837",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "EF763A9B-99B1-4FD6-B187-BD6833D37136",
+            "id": "6D051559-C48F-4BBE-AD72-5031CC5C33CE",
             "price": 6000,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "5",
                 "6",
@@ -987,20 +1010,21 @@ struct TestData {
             "category": "footwear",
             "variants": [
                 {
-                    "color": "Irish Coffee",
                     "product": {
-                        "id": "A0347FB8-8519-4B2C-8306-DCBAE21B704A"
+                        "id": "B943B91A-1AB6-4014-A6E8-0E1D7C3CD3B0"
                     },
-                    "id": "B1746E30-73D0-48C3-AF68-526E63B27997",
+                    "color": "Irish Coffee",
+                    "id": "F9611BB2-4FE9-4CC5-8AEF-904C7B79DAC8",
                     "hex": "593B20",
                     "image": "dressshoes-593B20",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "A0347FB8-8519-4B2C-8306-DCBAE21B704A",
+            "id": "B943B91A-1AB6-4014-A6E8-0E1D7C3CD3B0",
             "price": 5400,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "7",
                 "8",
@@ -1015,41 +1039,42 @@ struct TestData {
             "variants": [
                 {
                     "product": {
-                        "id": "772202B7-18AB-4904-A3E2-952D73D8D70F"
+                        "id": "6DCEDADC-1397-48FB-95D2-00DACE5D2B93"
                     },
                     "color": "Inchworm",
-                    "id": "DA4E79F3-23E5-4B71-A22C-CA9ABCEC77C8",
+                    "id": "2A165CFC-04C6-42E2-A9BD-74C7C7C16DE7",
                     "hex": "94EA76",
                     "image": "sandal-94EA76",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
-                    "color": "Flamenco",
                     "product": {
-                        "id": "772202B7-18AB-4904-A3E2-952D73D8D70F"
+                        "id": "6DCEDADC-1397-48FB-95D2-00DACE5D2B93"
                     },
-                    "id": "5FDC8F8D-1712-4F15-8625-B8DBEEE77C01",
+                    "color": "Flamenco",
+                    "id": "939D9D70-DF0E-4432-9336-5013B6E0116F",
                     "hex": "FE800C",
                     "image": "sandal-FE800C",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
-                    "color": "Bright Sun",
                     "product": {
-                        "id": "772202B7-18AB-4904-A3E2-952D73D8D70F"
+                        "id": "6DCEDADC-1397-48FB-95D2-00DACE5D2B93"
                     },
-                    "id": "7941E61B-1DF8-4860-953F-B42ED223755E",
+                    "color": "Bright Sun",
+                    "id": "887CA7BE-E0CE-4077-A9CA-F773CB697124",
                     "hex": "FFD53E",
                     "image": "sandal-FFD53E",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "772202B7-18AB-4904-A3E2-952D73D8D70F",
+            "id": "6DCEDADC-1397-48FB-95D2-00DACE5D2B93",
             "price": 2200,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "S",
                 "M",
@@ -1062,53 +1087,54 @@ struct TestData {
             "category": "footwear",
             "variants": [
                 {
-                    "color": "Scooter",
                     "product": {
-                        "id": "D6F8A70D-442C-44AA-8465-926C75091EE5"
+                        "id": "D3A27FF3-1908-481F-B37E-8E924E7985BF"
                     },
-                    "id": "FD1E0DE6-1116-4725-8B32-E84ED34A0470",
+                    "color": "Scooter",
+                    "id": "FF7DA359-B8F8-4725-8C59-BF8600A50692",
                     "hex": "3DBADA",
                     "image": "rainboots-3DBADA",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
-                    "color": "Bright Sun",
                     "product": {
-                        "id": "D6F8A70D-442C-44AA-8465-926C75091EE5"
+                        "id": "D3A27FF3-1908-481F-B37E-8E924E7985BF"
                     },
-                    "id": "44A557C0-607E-4D06-B047-7E6CE65DD241",
+                    "color": "Bright Sun",
+                    "id": "9EA959A4-1299-438B-B8D2-A36B7102471A",
                     "hex": "FFD53E",
                     "image": "rainboots-FFD53E",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
-                    "color": "Flamingo",
                     "product": {
-                        "id": "D6F8A70D-442C-44AA-8465-926C75091EE5"
+                        "id": "D3A27FF3-1908-481F-B37E-8E924E7985BF"
                     },
-                    "id": "E7811CF4-754D-4969-9163-26542267F804",
+                    "color": "Flamingo",
+                    "id": "661D02B3-5416-489C-B5FF-D46709303FFD",
                     "hex": "EE5D3D",
                     "image": "rainboots-EE5D3D",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
-                    "color": "Fuchsia",
                     "product": {
-                        "id": "D6F8A70D-442C-44AA-8465-926C75091EE5"
+                        "id": "D3A27FF3-1908-481F-B37E-8E924E7985BF"
                     },
-                    "id": "B61D986E-9824-43FB-B683-26F8B4B96B12",
+                    "color": "Fuchsia",
+                    "id": "A9069CA3-9874-4FDF-BB0D-5CBDE05AAA94",
                     "hex": "C94FCC",
                     "image": "rainboots-C94FCC",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "D6F8A70D-442C-44AA-8465-926C75091EE5",
+            "id": "D3A27FF3-1908-481F-B37E-8E924E7985BF",
             "price": 2200,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "6",
                 "7",
@@ -1123,31 +1149,32 @@ struct TestData {
             "category": "footwear",
             "variants": [
                 {
-                    "color": "Emerald",
                     "product": {
-                        "id": "33EA5AFA-AED9-413B-8295-2DAF9FC739FB"
+                        "id": "004F5510-77C3-4AF9-8E9B-30D916E7DF3A"
                     },
-                    "id": "523A6357-CD6B-4501-8986-8D467E13AFEB",
+                    "color": "Emerald",
+                    "id": "A9EBEA1F-5D57-46EF-B79D-9B5423E25F94",
                     "hex": "4EC67C",
                     "image": "boots-4EC67C",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
-                    "color": "Mule Fawn",
                     "product": {
-                        "id": "33EA5AFA-AED9-413B-8295-2DAF9FC739FB"
+                        "id": "004F5510-77C3-4AF9-8E9B-30D916E7DF3A"
                     },
-                    "id": "BA327BE4-A1DA-4495-976D-15163ECE7E51",
+                    "color": "Mule Fawn",
+                    "id": "98BCAD2D-27AC-4760-909F-AA0F649DB3FA",
                     "hex": "93522C",
                     "image": "boots-93522C",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "33EA5AFA-AED9-413B-8295-2DAF9FC739FB",
+            "id": "004F5510-77C3-4AF9-8E9B-30D916E7DF3A",
             "price": 4200,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "7",
                 "8",
@@ -1161,31 +1188,32 @@ struct TestData {
             "category": "footwear",
             "variants": [
                 {
-                    "color": "Lotus",
                     "product": {
-                        "id": "2481DEEE-D0F3-42B1-BF9D-EAA2E2192A25"
+                        "id": "9AB245F8-3EFD-4E66-9C0E-BF5DF6FCD3C8"
                     },
-                    "id": "85E43AEC-D6AA-4B46-948F-248DFE546A34",
+                    "color": "Lotus",
+                    "id": "6D5E3834-5735-4747-A2A8-A57293D79847",
                     "hex": "783434",
                     "image": "sneakers-783434",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
-                    "color": "Scorpion",
                     "product": {
-                        "id": "2481DEEE-D0F3-42B1-BF9D-EAA2E2192A25"
+                        "id": "9AB245F8-3EFD-4E66-9C0E-BF5DF6FCD3C8"
                     },
-                    "id": "75F9A11C-3ADF-4279-A20D-F187E64C2F39",
+                    "color": "Scorpion",
+                    "id": "1F94506C-1B91-4BA2-9FB6-FA1DC47475AB",
                     "hex": "5C5858",
                     "image": "sneakers-5C5858",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "2481DEEE-D0F3-42B1-BF9D-EAA2E2192A25",
+            "id": "9AB245F8-3EFD-4E66-9C0E-BF5DF6FCD3C8",
             "price": 6200,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "9",
                 "10",
@@ -1199,42 +1227,43 @@ struct TestData {
             "category": "footwear",
             "variants": [
                 {
-                    "color": "Amethyst",
                     "product": {
-                        "id": "4DC70D00-4EBC-4477-B1EE-96F66C8095E6"
+                        "id": "10D6747B-3D57-4182-A2F1-D679E8ED6B82"
                     },
-                    "id": "BE8F21D5-6CD5-4FF3-BA11-4D2D0111CF1B",
+                    "color": "Amethyst",
+                    "id": "B96339AA-A4F3-42D2-9D11-4BB8F593A341",
                     "hex": "9666C6",
                     "image": "runningshoes-9666C6",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
-                    "color": "Chestnut Rose",
                     "product": {
-                        "id": "4DC70D00-4EBC-4477-B1EE-96F66C8095E6"
+                        "id": "10D6747B-3D57-4182-A2F1-D679E8ED6B82"
                     },
-                    "id": "9A6092E2-7609-4721-9D06-6B854F767244",
+                    "color": "Chestnut Rose",
+                    "id": "9C8AA410-80DF-4019-A880-DCD13EEDC16C",
                     "hex": "CC4F60",
                     "image": "runningshoes-CC4F60",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 },
                 {
-                    "color": "Vista Blue",
                     "product": {
-                        "id": "4DC70D00-4EBC-4477-B1EE-96F66C8095E6"
+                        "id": "10D6747B-3D57-4182-A2F1-D679E8ED6B82"
                     },
-                    "id": "40F2E685-B77F-4FFD-87D7-499832E26ACF",
+                    "color": "Vista Blue",
+                    "id": "938B1173-9372-4851-9DD1-376C5449BCE4",
                     "hex": "9AD7B6",
                     "image": "runningshoes-9AD7B6",
-                    "updatedAt": "2023-04-08T00:00:00Z",
-                    "createdAt": "2023-04-08T00:00:00Z"
+                    "updatedAt": "2023-04-11T00:00:00Z",
+                    "createdAt": "2023-04-11T00:00:00Z"
                 }
             ],
-            "id": "4DC70D00-4EBC-4477-B1EE-96F66C8095E6",
+            "id": "10D6747B-3D57-4182-A2F1-D679E8ED6B82",
             "price": 5900,
             "discount": 0,
+            "updatedAt": "2023-04-11T00:00:00Z",
             "sizes": [
                 "8",
                 "9",

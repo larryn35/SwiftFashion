@@ -13,6 +13,7 @@ final class ProductTests: XCTestCase {
 
     override func setUpWithError() throws {
         let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
         let jsonData = try XCTUnwrap(TestData.productJSON.data(using: .utf8))
         products = try decoder.decode([Product].self, from: jsonData)
     }

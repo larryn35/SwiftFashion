@@ -12,6 +12,12 @@ enum HTTPMethod: String {
 }
 
 struct APIService: APIServiceProtocol {
+    let decoder = JSONDecoder()
+
+    init() {
+        decoder.dateDecodingStrategy = .iso8601
+    }
+
     func fetch<T: Decodable>(endpoint: Endpoint) async throws -> T {
         let urlComponents = URLComponents.build(from: endpoint)
 
@@ -32,7 +38,6 @@ struct APIService: APIServiceProtocol {
             }
 
             do {
-                let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = endpoint.keyDecodingStrategy
                 let result = try decoder.decode(T.self, from: data)
                 return result
@@ -72,7 +77,6 @@ struct APIService: APIServiceProtocol {
         }
 
         do {
-            let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = endpoint.keyDecodingStrategy
             return try decoder.decode(Output.self, from: data)
         } catch {

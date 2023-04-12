@@ -11,12 +11,20 @@ struct MockAPIService: APIServiceProtocol {
     var productJSON: String?
     var orderJSON: String?
 
+    let decoder = JSONDecoder()
+
+    init(productJSON: String? = nil, orderJSON: String? = nil) {
+        self.productJSON = productJSON
+        self.orderJSON = orderJSON
+
+        decoder.dateDecodingStrategy = .iso8601
+    }
+
     func fetch<T>(endpoint: Endpoint) async throws -> T where T: Decodable {
         if case .fetchProducts = endpoint as? ShoppingEndpoint,
            let productJSON,
            let productData = productJSON.data(using: .utf8) {
 
-            let decoder = JSONDecoder()
             let result = try decoder.decode(T.self, from: productData)
             return result
 
@@ -38,7 +46,6 @@ struct MockAPIService: APIServiceProtocol {
            let orderJSON,
            let orderData = orderJSON.data(using: .utf8) {
 
-            let decoder = JSONDecoder()
             let result = try decoder.decode(Output.self, from: orderData)
             return result
 

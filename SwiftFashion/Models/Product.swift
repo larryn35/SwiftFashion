@@ -16,6 +16,7 @@ struct Product: Decodable {
     let discount: Int
     let sizes: [String]
     let variants: [ColorVariant]
+    let updatedAt: Date
 }
 
 extension Product: Identifiable {

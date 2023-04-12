@@ -32,7 +32,7 @@ class HomeTabViewModel: ObservableObject {
     func sortProducts(by type: SortingType) {
         switch type {
         case .newest:
-            products = allProducts
+            products = allProducts.sorted(by: { $0.updatedAt > $1.updatedAt })
         case .lowToHigh:
             products = allProducts.sorted(by: { $0.currentPrice < $1.currentPrice })
         case .highToLow:
