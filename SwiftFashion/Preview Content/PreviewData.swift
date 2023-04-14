@@ -11,8 +11,10 @@ import Foundation
 
 struct PreviewData {
     static func products() -> [Product] {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
         let jsonData = productJSON.data(using: .utf8)!
-        let products = try? JSONDecoder().decode([Product].self, from: jsonData)
+        let products = try? decoder.decode([Product].self, from: jsonData)
         return products ?? []
     }
 
