@@ -13,6 +13,9 @@
 		D118FEC629E1177200A8EAA2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D118FEC529E1177200A8EAA2 /* Preview Assets.xcassets */; };
 		D118FEDA29E1177200A8EAA2 /* SwiftFashionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D118FED929E1177200A8EAA2 /* SwiftFashionUITests.swift */; };
 		D118FEDC29E1177200A8EAA2 /* SwiftFashionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D118FEDB29E1177200A8EAA2 /* SwiftFashionUITestsLaunchTests.swift */; };
+		D14F750529E8BD7D0001D3CB /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14F750429E8BD7D0001D3CB /* ProductView.swift */; };
+		D14F750829E8C54E0001D3CB /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14F750729E8C54E0001D3CB /* ProductViewModel.swift */; };
+		D14F750B29E8D9A60001D3CB /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14F750A29E8D9A60001D3CB /* ButtonStyles.swift */; };
 		D19C867229E5307B0033777A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D19C867129E5307B0033777A /* Localizable.strings */; };
 		D19C867729E5318B0033777A /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C867529E5318B0033777A /* XCAssets+Generated.swift */; };
 		D19C867829E5318B0033777A /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C867629E5318B0033777A /* Strings+Generated.swift */; };
@@ -71,6 +74,9 @@
 		D118FED529E1177200A8EAA2 /* SwiftFashionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftFashionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D118FED929E1177200A8EAA2 /* SwiftFashionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFashionUITests.swift; sourceTree = "<group>"; };
 		D118FEDB29E1177200A8EAA2 /* SwiftFashionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFashionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D14F750429E8BD7D0001D3CB /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		D14F750729E8C54E0001D3CB /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		D14F750A29E8D9A60001D3CB /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		D19C867129E5307B0033777A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		D19C867529E5318B0033777A /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		D19C867629E5318B0033777A /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
@@ -185,6 +191,23 @@
 			path = SwiftFashionUITests;
 			sourceTree = "<group>";
 		};
+		D14F750629E8BD830001D3CB /* ProductView */ = {
+			isa = PBXGroup;
+			children = (
+				D14F750429E8BD7D0001D3CB /* ProductView.swift */,
+				D14F750729E8C54E0001D3CB /* ProductViewModel.swift */,
+			);
+			path = ProductView;
+			sourceTree = "<group>";
+		};
+		D14F750929E8D96D0001D3CB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D14F750A29E8D9A60001D3CB /* ButtonStyles.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		D19C866F29E530520033777A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +247,8 @@
 				D118FEBE29E1177000A8EAA2 /* SwiftFashionApp.swift */,
 				D118FEC029E1177000A8EAA2 /* ContentView.swift */,
 				D1DBB96429E5F00500EB7FFA /* HomeTab */,
+				D14F750629E8BD830001D3CB /* ProductView */,
+				D14F750929E8D96D0001D3CB /* Components */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -450,8 +475,11 @@
 				D1DBB95229E5E0E800EB7FFA /* APIService.swift in Sources */,
 				D1DBB96329E5EFFD00EB7FFA /* HomeTabView.swift in Sources */,
 				D1DBB96C29E642A000EB7FFA /* SortingType.swift in Sources */,
+				D14F750829E8C54E0001D3CB /* ProductViewModel.swift in Sources */,
 				D1DBB94729E5D0CF00EB7FFA /* Order.swift in Sources */,
+				D14F750B29E8D9A60001D3CB /* ButtonStyles.swift in Sources */,
 				D118FEC129E1177000A8EAA2 /* ContentView.swift in Sources */,
+				D14F750529E8BD7D0001D3CB /* ProductView.swift in Sources */,
 				D19C867829E5318B0033777A /* Strings+Generated.swift in Sources */,
 				D1DBB97129E6453E00EB7FFA /* Color+Hex.swift in Sources */,
 				D118FEBF29E1177000A8EAA2 /* SwiftFashionApp.swift in Sources */,

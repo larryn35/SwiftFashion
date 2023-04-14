@@ -13,3 +13,10 @@ struct ColorVariant: Identifiable, Codable {
     let hex: String
     let image: String
 }
+
+extension ColorVariant: Equatable {
+    static var unavailable: ColorVariant = ColorVariant(id: UUID(),
+                                                        color: "",
+                                                        hex: "",
+                                                        image: "")
+}

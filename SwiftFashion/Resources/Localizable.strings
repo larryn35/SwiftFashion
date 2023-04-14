@@ -10,9 +10,17 @@
 
 // SFSymbols
 "sfs.settings" = "slider.horizontal.3";
+"sfs.cancel" = "xmark";
 
 // HomeTabView
 "home.menu.displaySection" = "Display setting";
 "home.menu.gridButton" = "Grid";
 "home.menu.rowsButton" = "Rows";
 "home.menu.sortSection" = "Sort products";
+
+// ProductView
+"productView.color" = "Color";
+"productView.size" = "Size";
+"productView.description" = "Description";
+"productView.title" = "Product Details";
+"productView.add" = "Add to cart";

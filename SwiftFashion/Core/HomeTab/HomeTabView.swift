@@ -11,6 +11,7 @@ struct HomeTabView: View {
     @StateObject private var viewModel: HomeTabViewModel
     @State private var selectedCategory: ProductCategory = .all
     @State private var selectedLayout: ProductGridLayout = .adaptive
+    @State var selectedProduct: Product?
     @Namespace private var namespace
 
     init(viewModel: HomeTabViewModel = HomeTabViewModel()) {
@@ -26,6 +27,7 @@ struct HomeTabView: View {
                         // MARK: ProductGridView
                         ScrollView(showsIndicators: false) {
                             ProductsGridView(layout: $selectedLayout,
+                                             selectedProduct: $selectedProduct,
                                              products: viewModel.products,
                                              category: category)
                                 .padding(.top, 80)
@@ -72,6 +74,9 @@ struct HomeTabView: View {
             // MARK: NavigationTitle
             .navigationTitle(L10n.appName)
             .navigationBarTitleDisplayMode(.inline)
+        }
+        .sheet(item: $selectedProduct) { product in
+            ProductView(product: product)
         }
     }
 }

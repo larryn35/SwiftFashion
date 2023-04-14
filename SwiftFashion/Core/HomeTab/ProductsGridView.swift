@@ -9,10 +9,17 @@ import SwiftUI
 
 struct ProductsGridView: View {
     @Binding var gridItemLayout: ProductGridLayout
+    @Binding var selectedProduct: Product?
+
     let products: [Product]
 
-    init(layout: Binding<ProductGridLayout>, products: [Product], category: ProductCategory) {
+    init(layout: Binding<ProductGridLayout>,
+         selectedProduct: Binding<Product?>,
+         products: [Product],
+         category: ProductCategory) {
+
         self._gridItemLayout = layout
+        self._selectedProduct = selectedProduct
 
         if category == .all {
             self.products = products
@@ -79,6 +86,9 @@ struct ProductsGridView: View {
                     RoundedRectangle(cornerRadius: 12)
                         .strokeBorder(Color(UIColor.systemGray6), lineWidth: 2)
                 )
+                .onTapGesture {
+                    selectedProduct = product
+                }
             }
         }
     }
@@ -108,13 +118,19 @@ struct ProductsGridView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ScrollView {
-                ProductsGridView(layout: .constant(.adaptive), products: PreviewData.products(), category: .all)
+                ProductsGridView(layout: .constant(.adaptive),
+                                 selectedProduct: .constant(.none),
+                                 products: PreviewData.products(),
+                                 category: .all)
                     .padding()
             }
             .previewDisplayName("Adaptive layout")
 
             ScrollView {
-                ProductsGridView(layout: .constant(.flexible), products: PreviewData.products(), category: .all)
+                ProductsGridView(layout: .constant(.flexible),
+                                 selectedProduct: .constant(.none),
+                                 products: PreviewData.products(),
+                                 category: .all)
                     .padding()
             }
             .previewDisplayName("Flexible layout")

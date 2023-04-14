@@ -27,7 +27,21 @@ internal enum L10n {
       internal static let sortSection = L10n.tr("Localizable", "home.menu.sortSection", fallback: "Sort products")
     }
   }
+  internal enum ProductView {
+    /// Add to cart
+    internal static let add = L10n.tr("Localizable", "productView.add", fallback: "Add to cart")
+    /// Color
+    internal static let color = L10n.tr("Localizable", "productView.color", fallback: "Color")
+    /// Description
+    internal static let description = L10n.tr("Localizable", "productView.description", fallback: "Description")
+    /// Size
+    internal static let size = L10n.tr("Localizable", "productView.size", fallback: "Size")
+    /// Product Details
+    internal static let title = L10n.tr("Localizable", "productView.title", fallback: "Product Details")
+  }
   internal enum Sfs {
+    /// xmark
+    internal static let cancel = L10n.tr("Localizable", "sfs.cancel", fallback: "xmark")
     /// slider.horizontal.3
     internal static let settings = L10n.tr("Localizable", "sfs.settings", fallback: "slider.horizontal.3")
   }
