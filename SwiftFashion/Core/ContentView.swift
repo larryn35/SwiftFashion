@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var cartManager = CartManager()
+
     var body: some View {
         TabView {
             HomeTabView()
@@ -21,6 +23,7 @@ struct ContentView: View {
                 }
         }
         .tint(.primary)
+        .environmentObject(cartManager)
     }
 }
 

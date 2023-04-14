@@ -11,6 +11,8 @@
 // SFSymbols
 "sfs.settings" = "slider.horizontal.3";
 "sfs.cancel" = "xmark";
+"sfs.plus" = "plus";
+"sfs.minus" = "minus";
 
 // HomeTabView
 "home.menu.displaySection" = "Display setting";
@@ -23,4 +25,5 @@
 "productView.size" = "Size";
 "productView.description" = "Description";
 "productView.title" = "Product Details";
-"productView.add" = "Add to cart";
+"productView.addToCart" = "Add to cart";
+"productView.numberInCart" = "%d in cart";

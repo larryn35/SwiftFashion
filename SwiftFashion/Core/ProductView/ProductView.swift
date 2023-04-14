@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ProductView: View {
+    @EnvironmentObject var cartManager: CartManager
+    @Environment(\.dismiss) var dismiss
+
     let product: Product
 
-    @State private var selectedVariant: ColorVariant = .unavailable
-    @State private var selectedSize: String = ""
-
-    @Environment(\.dismiss) var dismiss
-    @Namespace private var namespace
+    init(product: Product) {
+        self.product = product
+    }
 
     private let columns = Array(repeating: GridItem(.flexible()), count: 6)
 
@@ -30,7 +31,7 @@ struct ProductView: View {
                     ZStack(alignment: .bottomTrailing) {
                         Color(uiColor: .systemGray6)
 
-                        Image(selectedVariant.image)
+                        Image(cartManager.currentOrderItem.image)
                             .resizable()
                             .scaledToFit()
 
@@ -42,7 +43,6 @@ struct ProductView: View {
                     .padding(.top)
 
                     // MARK: Info
-
                     VStack(alignment: .leading) {
                         Text(product.name)
                             .font(.title)
@@ -67,7 +67,7 @@ struct ProductView: View {
                             .font(.headline)
                             .fontWeight(.semibold)
 
-                        Text(selectedVariant.color)
+                        Text(cartManager.currentOrderItem.color)
                     }
 
                     // Size
@@ -100,6 +100,9 @@ struct ProductView: View {
             // MARK: Add to cart button
             .overlay(alignment: .bottom) {
                 cartButton
+                    .foregroundColor(Color(uiColor: .systemBackground))
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 20))
                     .padding()
             }
             .edgesIgnoringSafeArea(.bottom)
@@ -122,8 +125,7 @@ struct ProductView: View {
         }
         .interactiveDismissDisabled()
         .onAppear {
-            selectedSize = product.sizes[0]
-            selectedVariant = product.variants[0]
+            cartManager.prepareOrder(for: product)
         }
     }
 }
@@ -135,16 +137,16 @@ extension ProductView {
         VStack {
             ForEach(product.variants) { variant in
                 Button {
-                    selectedVariant = variant
+                    cartManager.selectedColor(variant.color)
                 } label: {
                     RoundedRectangle(cornerRadius: 12)
                         .fill(Color(hex: variant.hex))
-                        .opacity(selectedVariant == variant ? 1 : 0.8)
+                        .opacity(cartManager.currentOrderItem.color == variant.color ? 1 : 0.8)
                         .frame(width: 40, height: 40)
                         .overlay(
                             RoundedRectangle(cornerRadius: 12)
                                 .strokeBorder(.primary, lineWidth: 2)
-                                .opacity(selectedVariant == variant ? 1 : 0)
+                                .opacity(cartManager.currentOrderItem.color == variant.color ? 1 : 0)
                         )
                 }
                 .tint(.primary)
@@ -157,9 +159,9 @@ extension ProductView {
         LazyVGrid(columns: columns, alignment: .leading) {
             ForEach(product.sizes, id: \.self) { size in
                 Button(size) {
-                    selectedSize = size
+                    cartManager.selectedSize(size)
                 }
-                .buttonStyle(SizeButtonStyle(selectedSize: $selectedSize,
+                .buttonStyle(SizeButtonStyle(selectedSize: $cartManager.currentOrderItem.size,
                                              clothingSize: size))
                 .frame(height: 50)
                 .tint(.primary)
@@ -167,17 +169,38 @@ extension ProductView {
         }
     }
 
+    @ViewBuilder
     var cartButton: some View {
-        Button {
+        if cartManager.itemCount > 0 {
+            // Item in cart, show add and subtract decrement buttons
+            HStack {
+                Button {
+                    cartManager.decrementItem()
+                } label: {
+                    Image(systemName: L10n.Sfs.minus)
+                }
+                .controlSize(.large)
 
-        } label: {
-            Text(L10n.ProductView.add)
-                .frame(maxWidth: .infinity)
+                Text(L10n.ProductView.numberInCart(cartManager.itemCount))
+                    .frame(maxWidth: .infinity)
+
+                Button {
+                    cartManager.addItem()
+                } label: {
+                    Image(systemName: L10n.Sfs.plus)
+                }
+                .controlSize(.large)
+            }
+
+        } else {
+            // Item not in cart, show single add item button
+            Button {
+                cartManager.addItem()
+            } label: {
+                Text(L10n.ProductView.addToCart)
+                    .frame(maxWidth: .infinity)
+            }
         }
-        .foregroundColor(Color(uiColor: .systemBackground))
-        .padding()
-        .background(RoundedRectangle(cornerRadius: 20))
-        .padding(.vertical)
     }
 }
 
@@ -185,6 +208,8 @@ extension ProductView {
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let product = PreviewData.products()[0]
+
         ProductView(product: product)
+            .environmentObject(CartManager())
     }
 }
