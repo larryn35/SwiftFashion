@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HomeTabViewModel: ObservableObject {
+final class HomeTabViewModel: ObservableObject {
     @Published var products: [Product] = []
     var allProducts: [Product] = []
 

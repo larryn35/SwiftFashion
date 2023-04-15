@@ -8,15 +8,11 @@
 import SwiftUI
 
 struct HomeTabView: View {
-    @StateObject private var viewModel: HomeTabViewModel
+    @StateObject var viewModel = HomeTabViewModel()
     @State private var selectedCategory: ProductCategory = .all
     @State private var selectedLayout: ProductGridLayout = .adaptive
     @State var selectedProduct: Product?
     @Namespace private var namespace
-
-    init(viewModel: HomeTabViewModel = HomeTabViewModel()) {
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
 
     var body: some View {
         NavigationStack {

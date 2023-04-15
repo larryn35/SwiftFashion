@@ -18,5 +18,5 @@ extension ColorVariant: Equatable {
     static var unavailable: ColorVariant = ColorVariant(id: UUID(),
                                                         color: "",
                                                         hex: "",
-                                                        image: "")
+                                                        image: "unavailable")
 }

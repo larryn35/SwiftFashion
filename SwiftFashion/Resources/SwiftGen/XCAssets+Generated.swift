@@ -102,6 +102,7 @@ internal enum Asset {
     internal static let turtleneck745EFC = ImageAsset(name: "turtleneck-745EFC")
     internal static let turtleneckCAC8D8 = ImageAsset(name: "turtleneck-CAC8D8")
   }
+  internal static let unavailable = ImageAsset(name: "unavailable")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
