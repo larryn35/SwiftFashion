@@ -16,6 +16,10 @@ struct OrderItem: Codable {
     var price: Int
     var discount: Int
     var quantity: Int
+
+    var displayPrice: Double {
+        Double(price - discount) / 100
+    }
 }
 
 extension OrderItem: Hashable {

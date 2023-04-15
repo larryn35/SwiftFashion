@@ -8,10 +8,12 @@
 import Foundation
 import OrderedCollections
 
-@MainActor
 final class CartManager: ObservableObject {
-    @Published var cart: OrderedDictionary<OrderItem, Int> = [:]
+    @Published var cart: OrderedDictionary<OrderItem, Int> = [:] {
+        didSet { calculateTotal() }
+    }
     @Published var currentOrderItem: OrderItem = .unavailable
+    @Published var total: Double = 0
 
     let apiService: APIServiceProtocol
 
@@ -41,11 +43,17 @@ final class CartManager: ObservableObject {
     }
 
     func decrementItem() {
-        if let quantity = cart[currentOrderItem], quantity > 0 {
+        if let quantity = cart[currentOrderItem], quantity > 1 {
             cart[currentOrderItem] = quantity - 1
         } else {
             removeAll(item: currentOrderItem)
         }
+    }
+
+    func removeItem(at offsets: IndexSet) {
+        let items = getItems()
+        let itemsToRemove = offsets.map { items[$0] }
+        itemsToRemove.forEach { removeAll(item: $0) }
     }
 
     func removeAll(item: OrderItem) {
@@ -70,5 +78,15 @@ final class CartManager: ObservableObject {
 
     func getItems() -> [OrderItem] {
         return Array(cart.keys)
+    }
+
+    func calculateTotal() {
+        var currentTotal: Double = 0
+
+        for (item, quantity) in cart {
+            currentTotal += (item.displayPrice * Double(quantity))
+        }
+
+        total = currentTotal
     }
 }

@@ -10,6 +10,14 @@
 import Foundation
 
 struct PreviewData {
+    static let orderItem = OrderItem(name: "T-shirt",
+                                     image: "tshirt-9E8A8A",
+                                     color: "Dusty Gray",
+                                     size: "M",
+                                     price: 1200,
+                                     discount: 240,
+                                     quantity: 1)
+
     static func products() -> [Product] {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601

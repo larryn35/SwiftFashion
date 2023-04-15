@@ -14,12 +14,12 @@ struct ContentView: View {
         TabView {
             HomeTabView()
                 .tabItem {
-                    Label("Home", systemImage: "house")
+                    Label(L10n.Tab.home, systemImage: L10n.Sfs.house)
                 }
 
-            Text("Cart")
+            CartTabView()
                 .tabItem {
-                    Label("Cart", systemImage: "cart")
+                    Label(L10n.Tab.cart, systemImage: L10n.Sfs.cart)
                 }
         }
         .tint(.primary)

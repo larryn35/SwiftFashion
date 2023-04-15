@@ -13,12 +13,25 @@
 "sfs.cancel" = "xmark";
 "sfs.plus" = "plus";
 "sfs.minus" = "minus";
+"sfs.house" = "house";
+"sfs.cart" = "cart";
+
+// ContentView
+"tab.home" = "Home";
+"tab.cart" = "Cart";
 
 // HomeTabView
 "home.menu.displaySection" = "Display setting";
 "home.menu.gridButton" = "Grid";
 "home.menu.rowsButton" = "Rows";
 "home.menu.sortSection" = "Sort products";
+
+// CartTabView
+"cart.emptyCart" = "Your cart is empty";
+"cart.total" = "Total";
+"cart.checkOut" = "Check out";
+"cart.title" = "Cart";
+"cart.itemSize" = "Size: %@";
 
 // ProductView
 "productView.color" = "Color";

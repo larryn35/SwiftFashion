@@ -15,6 +15,20 @@ internal enum L10n {
   /// 
   ///   Created by Larry Nguyen on 4/10/23.
   internal static let appName = L10n.tr("Localizable", "appName", fallback: "Swift Fashion")
+  internal enum Cart {
+    /// Check out
+    internal static let checkOut = L10n.tr("Localizable", "cart.checkOut", fallback: "Check out")
+    /// Your cart is empty
+    internal static let emptyCart = L10n.tr("Localizable", "cart.emptyCart", fallback: "Your cart is empty")
+    /// Size: %@
+    internal static func itemSize(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "cart.itemSize", String(describing: p1), fallback: "Size: %@")
+    }
+    /// Cart
+    internal static let title = L10n.tr("Localizable", "cart.title", fallback: "Cart")
+    /// Total
+    internal static let total = L10n.tr("Localizable", "cart.total", fallback: "Total")
+  }
   internal enum Home {
     internal enum Menu {
       /// Display setting
@@ -46,12 +60,22 @@ internal enum L10n {
   internal enum Sfs {
     /// xmark
     internal static let cancel = L10n.tr("Localizable", "sfs.cancel", fallback: "xmark")
+    /// cart
+    internal static let cart = L10n.tr("Localizable", "sfs.cart", fallback: "cart")
+    /// house
+    internal static let house = L10n.tr("Localizable", "sfs.house", fallback: "house")
     /// minus
     internal static let minus = L10n.tr("Localizable", "sfs.minus", fallback: "minus")
     /// plus
     internal static let plus = L10n.tr("Localizable", "sfs.plus", fallback: "plus")
     /// slider.horizontal.3
     internal static let settings = L10n.tr("Localizable", "sfs.settings", fallback: "slider.horizontal.3")
+  }
+  internal enum Tab {
+    /// Cart
+    internal static let cart = L10n.tr("Localizable", "tab.cart", fallback: "Cart")
+    /// Home
+    internal static let home = L10n.tr("Localizable", "tab.home", fallback: "Home")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
