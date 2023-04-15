@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import OrderedCollections
 
 @MainActor
 final class CartManager: ObservableObject {
-    @Published var cart: [OrderItem: Int] = [:]
+    @Published var cart: OrderedDictionary<OrderItem, Int> = [:]
     @Published var currentOrderItem: OrderItem = .unavailable
 
     let apiService: APIServiceProtocol
