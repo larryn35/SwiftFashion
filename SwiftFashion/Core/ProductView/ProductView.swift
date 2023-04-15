@@ -137,7 +137,7 @@ extension ProductView {
         VStack {
             ForEach(product.variants) { variant in
                 Button {
-                    cartManager.selectedColor(variant.color)
+                    cartManager.selectedVariant(variant)
                 } label: {
                     RoundedRectangle(cornerRadius: 12)
                         .fill(Color(hex: variant.hex))

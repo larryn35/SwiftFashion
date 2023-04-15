@@ -7,7 +7,8 @@
 
 import Foundation
 
-class CartManager: ObservableObject {
+@MainActor
+final class CartManager: ObservableObject {
     @Published var cart: [OrderItem: Int] = [:]
     @Published var currentOrderItem: OrderItem = .unavailable
 
@@ -29,8 +30,9 @@ class CartManager: ObservableObject {
         currentOrderItem.size = size
     }
 
-    func selectedColor(_ color: String) {
-        currentOrderItem.color = color
+    func selectedVariant(_ variant: ColorVariant) {
+        currentOrderItem.image = variant.image
+        currentOrderItem.color = variant.color
     }
 
     func addItem() {
