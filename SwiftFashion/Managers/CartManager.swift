@@ -15,6 +15,12 @@ final class CartManager: ObservableObject {
     @Published var currentOrderItem: OrderItem = .unavailable
     @Published var total: Double = 0
 
+    @Published var customer = Customer()
+    @Published var orderStatus: OrderStatus = .invalid
+    @Published var showAlert: Bool = false
+
+    @Published var completedOrder: Order?
+
     let apiService: APIServiceProtocol
 
     init(apiService: APIServiceProtocol = APIService()) {
@@ -24,6 +30,8 @@ final class CartManager: ObservableObject {
     var itemCount: Int {
         quantityFor(item: currentOrderItem)
     }
+
+    var orderError: OrderError?
 
     func prepareOrder(for product: Product) {
         currentOrderItem = OrderItem(product: product)
@@ -88,5 +96,47 @@ final class CartManager: ObservableObject {
         }
 
         total = currentTotal
+    }
+
+    @MainActor
+    func submitOrder() async {
+        orderStatus = .processing
+
+        defer {
+            orderStatus = .valid
+        }
+
+        let orderID = UUID()
+
+        var items = getItems()
+        for (index, item) in items.enumerated() {
+            items[index].orderID = orderID
+            items[index].quantity = quantityFor(item: item)
+        }
+
+        let order = Order(id: orderID,
+                          customerName: customer.name,
+                          email: customer.email,
+                          address: customer.address,
+                          city: customer.city,
+                          state: customer.state,
+                          zip: customer.zip,
+                          items: items)
+
+        do {
+            try await Task.sleep(for: .seconds(3))
+
+            let endpoint = ShoppingEndpoint.createOrder
+            let submittedOrder: Order = try await apiService.sendData(endpoint: endpoint, data: order)
+            self.completedOrder = submittedOrder
+
+        } catch {
+            orderError = .processingError
+            showAlert = true
+        }
+    }
+
+    func dismissError() {
+        orderError = nil
     }
 }

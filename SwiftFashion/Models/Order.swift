@@ -56,3 +56,31 @@ extension Order {
     var total: Int { _total ?? 0 }
     var savings: Int { _savings ?? 0 }
 }
+
+extension Order {
+    static var inital: Order {
+        Order(customerName: "",
+              email: "",
+              address: "",
+              city: "",
+              state: "",
+              zip: "",
+              items: [])
+    }
+}
+
+enum OrderStatus {
+    case invalid, valid, processing
+}
+
+enum OrderError: LocalizedError {
+    case invalidForm(String)
+    case processingError
+
+    var errorDescription: String? {
+        switch self {
+        case .invalidForm(let reason): return reason
+        case .processingError: return L10n.Error.orderProcessing
+        }
+    }
+}

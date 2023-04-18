@@ -60,6 +60,9 @@ struct CartTabView: View {
                 }
             }
             .navigationTitle(L10n.Cart.title)
+            .sheet(isPresented: $showCheckoutView) {
+                CheckOutView()
+            }
         }
     }
 }

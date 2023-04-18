@@ -15,6 +15,22 @@
 "sfs.minus" = "minus";
 "sfs.house" = "house";
 "sfs.cart" = "cart";
+"sfs.creditCard" = "creditcard";
+
+// Buttons
+"button.cancel" = "Cancel";
+"button.ok" = "OK";
+"button.done" = "Done";
+"button.completeOrder" = "Complete Order - ";
+"button.proccessingOrder" = "Proccessing Order";
+
+// Labels
+"label.name" = "Name";
+"label.email" = "Email";
+"label.address" = "Address";
+"label.city" = "City";
+"label.state" = "State";
+"label.zip" = "Zip Code";
 
 // ContentView
 "tab.home" = "Home";
@@ -26,13 +42,6 @@
 "home.menu.rowsButton" = "Rows";
 "home.menu.sortSection" = "Sort products";
 
-// CartTabView
-"cart.emptyCart" = "Your cart is empty";
-"cart.total" = "Total";
-"cart.checkOut" = "Check out";
-"cart.title" = "Cart";
-"cart.itemSize" = "Size: %@";
-
 // ProductView
 "productView.color" = "Color";
 "productView.size" = "Size";
@@ -40,3 +49,27 @@
 "productView.title" = "Product Details";
 "productView.addToCart" = "Add to cart";
 "productView.numberInCart" = "%d in cart";
+
+// CartTabView
+"cart.emptyCart" = "Your cart is empty";
+"cart.total" = "Total";
+"cart.checkOut" = "Check out";
+"cart.title" = "Cart";
+"cart.itemSize" = "Size: %@";
+
+// OrderForm
+"orderForm.payment" = "Payment";
+"orderForm.title" = "Checkout";
+
+// Placeholders
+"placeholder.ccNumber" = "••••• 2547";
+"placeholder.expDate" = "08/27";
+"placeholder.name" = "John Smith";
+"placeholder.email" = "john@email.com";
+"placeholder.address" = "1 Apple Park Way";
+"placeholder.city" = "Cupertino";
+"placeholder.state" = "CA";
+"placeholder.zip" = "95014";
+
+// Errors
+"error.orderProcessing" = "Sorry, we are unable to process your order right now. Please try again later.";
