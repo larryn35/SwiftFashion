@@ -10,6 +10,14 @@
 import Foundation
 
 struct PreviewData {
+    static let order = Order(customerName: L10n.Placeholder.name,
+                             email: L10n.Placeholder.email,
+                             address: L10n.Placeholder.address,
+                             city: L10n.Placeholder.city,
+                             state: L10n.Placeholder.state,
+                             zip: L10n.Placeholder.zip,
+                             items: [orderItem])
+
     static let orderItem = OrderItem(name: "T-shirt",
                                      image: "tshirt-9E8A8A",
                                      color: "Dusty Gray",

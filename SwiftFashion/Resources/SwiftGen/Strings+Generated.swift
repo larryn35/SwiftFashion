@@ -77,6 +77,18 @@ internal enum L10n {
     /// Zip Code
     internal static let zip = L10n.tr("Localizable", "label.zip", fallback: "Zip Code")
   }
+  internal enum OrderConfirmation {
+    /// Thanks for shopping with us, %@. We'll send a confirmation email when your order has shipped.
+    internal static func message(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "orderConfirmation.message", String(describing: p1), fallback: "Thanks for shopping with us, %@. We'll send a confirmation email when your order has shipped.")
+    }
+    /// Order Date
+    internal static let orderDate = L10n.tr("Localizable", "orderConfirmation.orderDate", fallback: "Order Date")
+    /// Order number
+    internal static let orderNumber = L10n.tr("Localizable", "orderConfirmation.orderNumber", fallback: "Order number")
+    /// Thank you!
+    internal static let thankYou = L10n.tr("Localizable", "orderConfirmation.thankYou", fallback: "Thank you!")
+  }
   internal enum OrderForm {
     /// Payment
     internal static let payment = L10n.tr("Localizable", "orderForm.payment", fallback: "Payment")

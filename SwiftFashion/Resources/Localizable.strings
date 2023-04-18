@@ -61,6 +61,11 @@
 "orderForm.payment" = "Payment";
 "orderForm.title" = "Checkout";
 
+"orderConfirmation.thankYou" = "Thank you!";
+"orderConfirmation.message" = "Thanks for shopping with us, %@. We'll send a confirmation email when your order has shipped.";
+"orderConfirmation.orderNumber" = "Order number";
+"orderConfirmation.orderDate" = "Order Date";
+
 // Placeholders
 "placeholder.ccNumber" = "••••• 2547";
 "placeholder.expDate" = "08/27";

@@ -11,7 +11,11 @@ struct CheckoutView: View {
     @EnvironmentObject var cartManager: CartManager
 
     var body: some View {
-        OrderFormView()
+        if let completedOrder = cartManager.completedOrder {
+            OrderConfirmationView(order: completedOrder)
+        } else {
+            OrderFormView()
+        }
     }
 }
 

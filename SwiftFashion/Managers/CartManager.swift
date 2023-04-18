@@ -130,10 +130,17 @@ final class CartManager: ObservableObject {
             let submittedOrder: Order = try await apiService.sendData(endpoint: endpoint, data: order)
             self.completedOrder = submittedOrder
 
+            cart.removeAll()
+            customer = .init()
+
         } catch {
             orderError = .processingError
             showAlert = true
         }
+    }
+
+    func clearOrder() {
+        completedOrder = nil
     }
 
     func dismissError() {

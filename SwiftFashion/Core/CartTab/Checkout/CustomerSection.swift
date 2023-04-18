@@ -87,8 +87,6 @@ struct CustomerSection: View {
                 focusedField = .state
             case .state:
                 focusedField = .zip
-            case .zip:
-                focusedField = .email
             default:
                 focusedField = nil
             }
