@@ -181,7 +181,7 @@ extension ProductView {
                 }
                 .controlSize(.large)
 
-                Text(L10n.ProductView.numberInCart(cartManager.itemCount))
+                Text(L10n.Button.numberInCart(cartManager.itemCount))
                     .frame(maxWidth: .infinity)
 
                 Button {
@@ -197,7 +197,7 @@ extension ProductView {
             Button {
                 cartManager.addItem()
             } label: {
-                Text(L10n.ProductView.addToCart)
+                Text(L10n.Button.addToCart)
                     .frame(maxWidth: .infinity)
             }
         }

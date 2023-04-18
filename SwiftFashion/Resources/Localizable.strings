@@ -21,6 +21,9 @@
 "button.cancel" = "Cancel";
 "button.ok" = "OK";
 "button.done" = "Done";
+"button.addToCart" = "Add to cart";
+"button.numberInCart" = "%d in cart";
+"button.checkOut" = "Check out";
 "button.completeOrder" = "Complete Order - ";
 "button.proccessingOrder" = "Proccessing Order";
 
@@ -47,13 +50,10 @@
 "productView.size" = "Size";
 "productView.description" = "Description";
 "productView.title" = "Product Details";
-"productView.addToCart" = "Add to cart";
-"productView.numberInCart" = "%d in cart";
 
 // CartTabView
 "cart.emptyCart" = "Your cart is empty";
 "cart.total" = "Total";
-"cart.checkOut" = "Check out";
 "cart.title" = "Cart";
 "cart.itemSize" = "Size: %@";
 

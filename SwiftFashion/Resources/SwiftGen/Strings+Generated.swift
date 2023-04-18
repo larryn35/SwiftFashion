@@ -16,20 +16,26 @@ internal enum L10n {
   ///   Created by Larry Nguyen on 4/10/23.
   internal static let appName = L10n.tr("Localizable", "appName", fallback: "Swift Fashion")
   internal enum Button {
+    /// Add to cart
+    internal static let addToCart = L10n.tr("Localizable", "button.addToCart", fallback: "Add to cart")
     /// Cancel
     internal static let cancel = L10n.tr("Localizable", "button.cancel", fallback: "Cancel")
+    /// Check out
+    internal static let checkOut = L10n.tr("Localizable", "button.checkOut", fallback: "Check out")
     /// Complete Order - 
     internal static let completeOrder = L10n.tr("Localizable", "button.completeOrder", fallback: "Complete Order - ")
     /// Done
     internal static let done = L10n.tr("Localizable", "button.done", fallback: "Done")
+    /// %d in cart
+    internal static func numberInCart(_ p1: Int) -> String {
+      return L10n.tr("Localizable", "button.numberInCart", p1, fallback: "%d in cart")
+    }
     /// OK
     internal static let ok = L10n.tr("Localizable", "button.ok", fallback: "OK")
     /// Proccessing Order
     internal static let proccessingOrder = L10n.tr("Localizable", "button.proccessingOrder", fallback: "Proccessing Order")
   }
   internal enum Cart {
-    /// Check out
-    internal static let checkOut = L10n.tr("Localizable", "cart.checkOut", fallback: "Check out")
     /// Your cart is empty
     internal static let emptyCart = L10n.tr("Localizable", "cart.emptyCart", fallback: "Your cart is empty")
     /// Size: %@
@@ -96,16 +102,10 @@ internal enum L10n {
     internal static let zip = L10n.tr("Localizable", "placeholder.zip", fallback: "95014")
   }
   internal enum ProductView {
-    /// Add to cart
-    internal static let addToCart = L10n.tr("Localizable", "productView.addToCart", fallback: "Add to cart")
     /// Color
     internal static let color = L10n.tr("Localizable", "productView.color", fallback: "Color")
     /// Description
     internal static let description = L10n.tr("Localizable", "productView.description", fallback: "Description")
-    /// %d in cart
-    internal static func numberInCart(_ p1: Int) -> String {
-      return L10n.tr("Localizable", "productView.numberInCart", p1, fallback: "%d in cart")
-    }
     /// Size
     internal static let size = L10n.tr("Localizable", "productView.size", fallback: "Size")
     /// Product Details

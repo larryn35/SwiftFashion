@@ -96,6 +96,7 @@ extension HomeTabView {
                     }
                     .padding(.vertical, 4)
                     .padding(.horizontal, 12)
+                    .contentShape(Rectangle())
                     .tint(.primary)
                     .background {
                         if selectedCategory == category {

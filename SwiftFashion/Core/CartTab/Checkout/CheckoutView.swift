@@ -1,5 +1,5 @@
 //
-//  CheckOutView.swift
+//  CheckoutView.swift
 //  SwiftFashion
 //
 //  Created by Larry Nguyen on 4/14/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CheckOutView: View {
+struct CheckoutView: View {
     @EnvironmentObject var cartManager: CartManager
 
     var body: some View {
@@ -15,9 +15,9 @@ struct CheckOutView: View {
     }
 }
 
-struct CheckOutView_Previews: PreviewProvider {
+struct CheckoutView_Previews: PreviewProvider {
     static var previews: some View {
-        CheckOutView()
+        CheckoutView()
             .environmentObject(CartManager())
     }
 }

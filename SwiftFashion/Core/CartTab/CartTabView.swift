@@ -48,7 +48,7 @@ struct CartTabView: View {
                         Button {
                             showCheckoutView.toggle()
                         } label: {
-                            Text(L10n.Cart.checkOut)
+                            Text(L10n.Button.checkOut)
                                 .frame(maxWidth: .infinity)
                         }
                         .foregroundColor(Color(uiColor: .systemBackground))
@@ -61,7 +61,7 @@ struct CartTabView: View {
             }
             .navigationTitle(L10n.Cart.title)
             .sheet(isPresented: $showCheckoutView) {
-                CheckOutView()
+                CheckoutView()
             }
         }
     }

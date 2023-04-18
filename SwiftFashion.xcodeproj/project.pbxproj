@@ -20,7 +20,7 @@
 		D197F08629EA361D0006909E /* CartTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197F08529EA361D0006909E /* CartTabView.swift */; };
 		D197F08929EA375C0006909E /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = D197F08829EA375C0006909E /* OrderedCollections */; };
 		D197F08B29EA38E60006909E /* CartItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197F08A29EA38E60006909E /* CartItemRow.swift */; };
-		D197F08D29EA47240006909E /* CheckOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197F08C29EA47240006909E /* CheckOutView.swift */; };
+		D197F08D29EA47240006909E /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197F08C29EA47240006909E /* CheckoutView.swift */; };
 		D197F08F29EA47540006909E /* OrderFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197F08E29EA47540006909E /* OrderFormView.swift */; };
 		D197F09129EA491F0006909E /* TextfieldStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197F09029EA491F0006909E /* TextfieldStyles.swift */; };
 		D197F09329EA49A20006909E /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197F09229EA49A20006909E /* Customer.swift */; };
@@ -90,7 +90,7 @@
 		D197F08229EA35C70006909E /* MockAPIService+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockAPIService+Preview.swift"; sourceTree = "<group>"; };
 		D197F08529EA361D0006909E /* CartTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTabView.swift; sourceTree = "<group>"; };
 		D197F08A29EA38E60006909E /* CartItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemRow.swift; sourceTree = "<group>"; };
-		D197F08C29EA47240006909E /* CheckOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutView.swift; sourceTree = "<group>"; };
+		D197F08C29EA47240006909E /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		D197F08E29EA47540006909E /* OrderFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFormView.swift; sourceTree = "<group>"; };
 		D197F09029EA491F0006909E /* TextfieldStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldStyles.swift; sourceTree = "<group>"; };
 		D197F09229EA49A20006909E /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
@@ -235,9 +235,7 @@
 			children = (
 				D197F08529EA361D0006909E /* CartTabView.swift */,
 				D197F08A29EA38E60006909E /* CartItemRow.swift */,
-				D197F08C29EA47240006909E /* CheckOutView.swift */,
-				D197F08E29EA47540006909E /* OrderFormView.swift */,
-				D1CC6DBB29EE11FC002CBEFF /* CustomerSection.swift */,
+				D1CC6DBD29EE1BB0002CBEFF /* Checkout */,
 			);
 			path = CartTab;
 			sourceTree = "<group>";
@@ -287,6 +285,16 @@
 				D14F750929E8D96D0001D3CB /* Components */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		D1CC6DBD29EE1BB0002CBEFF /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				D197F08C29EA47240006909E /* CheckoutView.swift */,
+				D197F08E29EA47540006909E /* OrderFormView.swift */,
+				D1CC6DBB29EE11FC002CBEFF /* CustomerSection.swift */,
+			);
+			path = Checkout;
 			sourceTree = "<group>";
 		};
 		D1DBB94E29E5E0AA00EB7FFA /* Networking */ = {
@@ -533,7 +541,7 @@
 				D118FEBF29E1177000A8EAA2 /* SwiftFashionApp.swift in Sources */,
 				D1DBB95A29E5E5F800EB7FFA /* MockAPIService.swift in Sources */,
 				D1DBB96A29E6056200EB7FFA /* ProductsGridView.swift in Sources */,
-				D197F08D29EA47240006909E /* CheckOutView.swift in Sources */,
+				D197F08D29EA47240006909E /* CheckoutView.swift in Sources */,
 				D19C867E29E533C60033777A /* Product.swift in Sources */,
 				D1DBB95429E5E10300EB7FFA /* Endpoint.swift in Sources */,
 				D197F08329EA35C70006909E /* MockAPIService+Preview.swift in Sources */,
