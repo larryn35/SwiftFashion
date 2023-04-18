@@ -21,6 +21,7 @@
 "button.cancel" = "Cancel";
 "button.ok" = "OK";
 "button.done" = "Done";
+"button.tryAgain" = "Try again";
 "button.addToCart" = "Add to cart";
 "button.numberInCart" = "%d in cart";
 "button.checkOut" = "Check out";
@@ -78,3 +79,4 @@
 
 // Errors
 "error.orderProcessing" = "Sorry, we are unable to process your order right now. Please try again later.";
+"error.unableToConnect" = "Unable to connect to server. Please ensure that your server and database are running and try again.";

@@ -17,22 +17,42 @@ struct HomeTabView: View {
     var body: some View {
         NavigationStack {
             ZStack(alignment: .top) {
-                TabView(selection: $selectedCategory) {
-                    ForEach(ProductCategory.allCases) { category in
+                switch viewModel.fetchStatus {
+                case .inProgress:
+                    ProgressView()
+                        .frame(maxHeight: .infinity)
 
-                        // MARK: ProductGridView
-                        ScrollView(showsIndicators: false) {
-                            ProductsGridView(layout: $selectedLayout,
-                                             selectedProduct: $selectedProduct,
-                                             products: viewModel.products,
-                                             category: category)
-                                .padding(.top, 80)
+                case .error:
+                    VStack(spacing: 48) {
+                        Text(L10n.Error.unableToConnect)
+
+                        Button(L10n.Button.tryAgain) {
+                            viewModel.fetchProducts()
                         }
-                        .padding(.horizontal)
-                        .tag(category)
+                        .buttonStyle(PrimaryButtonStyle())
+                        .tint(.primary)
                     }
+                    .padding(.horizontal)
+                    .frame(maxHeight: .infinity)
+
+                case .success:
+                    TabView(selection: $selectedCategory) {
+                        ForEach(ProductCategory.allCases) { category in
+
+                            // MARK: ProductGridView
+                            ScrollView(showsIndicators: false) {
+                                ProductsGridView(layout: $selectedLayout,
+                                                 selectedProduct: $selectedProduct,
+                                                 products: viewModel.products,
+                                                 category: category)
+                                .padding(.top, 80)
+                            }
+                            .padding(.horizontal)
+                            .tag(category)
+                        }
+                    }
+                    .tabViewStyle(.page(indexDisplayMode: .never))
                 }
-                .tabViewStyle(.page(indexDisplayMode: .never))
 
                 // MARK: CategoryButtons
                 categoryButtons

@@ -8,8 +8,12 @@
 import Foundation
 
 final class HomeTabViewModel: ObservableObject {
+    enum FetchStatus {
+        case error, inProgress, success
+    }
+
     @Published var products: [Product] = []
-    var allProducts: [Product] = []
+    @Published var fetchStatus: FetchStatus = .inProgress
 
     let apiService: APIServiceProtocol
 
@@ -19,12 +23,14 @@ final class HomeTabViewModel: ObservableObject {
     }
 
     func fetchProducts() {
+        fetchStatus = .inProgress
+
         Task { @MainActor in
             do {
-                allProducts = try await apiService.fetch(endpoint: ShoppingEndpoint.fetchProducts)
-                products = allProducts
+                products = try await apiService.fetch(endpoint: ShoppingEndpoint.fetchProducts)
+                fetchStatus = .success
             } catch {
-                print("Unable to fetch products:", error.localizedDescription)
+                fetchStatus = .error
             }
         }
     }
@@ -32,15 +38,15 @@ final class HomeTabViewModel: ObservableObject {
     func sortProducts(by type: SortingType) {
         switch type {
         case .newest:
-            products = allProducts.sorted(by: { $0.updatedAt > $1.updatedAt })
+            products.sort(by: { $0.updatedAt > $1.updatedAt })
         case .lowToHigh:
-            products = allProducts.sorted(by: { $0.currentPrice < $1.currentPrice })
+            products.sort(by: { $0.currentPrice < $1.currentPrice })
         case .highToLow:
-            products = allProducts.sorted(by: { $0.currentPrice > $1.currentPrice })
+            products.sort(by: { $0.currentPrice > $1.currentPrice })
         case .aToZ:
-            products = allProducts.sorted(by: { $0.name < $1.name })
+            products.sort(by: { $0.name < $1.name })
         case .zToA:
-            products = allProducts.sorted(by: { $0.name > $1.name })
+            products.sort(by: { $0.name > $1.name })
         }
     }
 }

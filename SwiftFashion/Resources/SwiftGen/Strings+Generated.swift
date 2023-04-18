@@ -34,6 +34,8 @@ internal enum L10n {
     internal static let ok = L10n.tr("Localizable", "button.ok", fallback: "OK")
     /// Proccessing Order
     internal static let proccessingOrder = L10n.tr("Localizable", "button.proccessingOrder", fallback: "Proccessing Order")
+    /// Try again
+    internal static let tryAgain = L10n.tr("Localizable", "button.tryAgain", fallback: "Try again")
   }
   internal enum Cart {
     /// Your cart is empty
@@ -50,6 +52,8 @@ internal enum L10n {
   internal enum Error {
     /// Sorry, we are unable to process your order right now. Please try again later.
     internal static let orderProcessing = L10n.tr("Localizable", "error.orderProcessing", fallback: "Sorry, we are unable to process your order right now. Please try again later.")
+    /// Unable to connect to server. Please ensure that your server and database are running and try again.
+    internal static let unableToConnect = L10n.tr("Localizable", "error.unableToConnect", fallback: "Unable to connect to server. Please ensure that your server and database are running and try again.")
   }
   internal enum Home {
     internal enum Menu {
