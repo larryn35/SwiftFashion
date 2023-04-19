@@ -9,10 +9,8 @@ import XCTest
 @testable import SwiftFashion
 
 final class APIServiceTests: XCTestCase {
-    private let apiService = MockAPIService(productJSON: TestData.productJSON,
-                                            orderJSON: TestData.orderJSON)
-
-    private let orderData = TestData.createOrder()
+    private let apiService = MockAPIService()
+    private let orderData = MockData.createOrder()
 
     func testProductsCanBeFetchedFromAPI() async throws {
         let endpoint = ShoppingEndpoint.fetchProducts
@@ -20,7 +18,7 @@ final class APIServiceTests: XCTestCase {
 
         XCTAssertEqual(products.count, 26)
 
-        let expectedProduct = TestData.tshirtProduct
+        let expectedProduct = MockData.tshirtProduct
         XCTAssertEqual(products[0].category, expectedProduct.category)
         XCTAssertEqual(products[0].name, expectedProduct.name)
     }

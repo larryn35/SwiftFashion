@@ -11,7 +11,7 @@ struct HomeTabView: View {
     @StateObject var viewModel = HomeTabViewModel()
     @State private var selectedCategory: ProductCategory = .all
     @State private var selectedLayout: ProductGridLayout = .adaptive
-    @State var selectedProduct: Product?
+    @State private var selectedProduct: Product?
     @Namespace private var namespace
 
     var body: some View {
@@ -139,7 +139,9 @@ extension HomeTabView {
 // MARK: - Previews
 
 struct HomeTabView_Previews: PreviewProvider {
+    static let viewModel = HomeTabViewModel(apiService: MockAPIService())
+
     static var previews: some View {
-        HomeTabView(viewModel: HomeTabViewModel(apiService: MockAPIService.preview))
+        HomeTabView(viewModel: viewModel)
     }
 }

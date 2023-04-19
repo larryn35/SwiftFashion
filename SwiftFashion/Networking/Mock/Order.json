@@ -1,0 +1,26 @@
+{
+    "address": "1 Apple Park Way",
+    "city": "Cupertino",
+    "customerName": "John Smith",
+    "email": "john@email.com",
+    "zip": "95014",
+    "total": 1600,
+    "savings": 400,
+    "state": "CA",
+    "items": [
+        {
+            "color": "Dusty Gray",
+            "quantity": 2,
+            "order": {
+                "id": "11FF2286-7714-4EE7-93C2-8064A62131C0"
+            },
+            "price": 800,
+            "id": "293ED645-ED3C-4742-AD81-403B0FF999D8",
+            "size": "M",
+            "discount": 200,
+            "image": "tshirt-9E8A8A",
+            "createdAt": "2023-04-11T00:00:00Z",
+            "name": "T-shirt"
+        }
+    ]
+}

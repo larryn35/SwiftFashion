@@ -65,7 +65,7 @@ struct CartItemRow_Previews: PreviewProvider {
     static func update(_ item: OrderItem, _ int: Int) {}
 
     static var previews: some View {
-        CartItemRow(item: PreviewData.orderItem,
+        CartItemRow(item: MockData.createShirtOrderItem(),
                     quantity: 1,
                     updateHandler: update)
         .padding()

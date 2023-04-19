@@ -120,7 +120,7 @@ struct ProductsGridView_Previews: PreviewProvider {
             ScrollView {
                 ProductsGridView(layout: .constant(.adaptive),
                                  selectedProduct: .constant(.none),
-                                 products: PreviewData.products(),
+                                 products: MockData.products,
                                  category: .all)
                     .padding()
             }
@@ -129,7 +129,7 @@ struct ProductsGridView_Previews: PreviewProvider {
             ScrollView {
                 ProductsGridView(layout: .constant(.flexible),
                                  selectedProduct: .constant(.none),
-                                 products: PreviewData.products(),
+                                 products: MockData.products,
                                  category: .all)
                     .padding()
             }

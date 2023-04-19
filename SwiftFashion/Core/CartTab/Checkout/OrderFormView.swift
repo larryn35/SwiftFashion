@@ -81,6 +81,6 @@ extension OrderFormView {
 struct OrderFormView_Previews: PreviewProvider {
     static var previews: some View {
         OrderFormView()
-            .environmentObject(CartManager(apiService: MockAPIService.preview))
+            .environmentObject(CartManager(apiService: MockAPIService()))
     }
 }

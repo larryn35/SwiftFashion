@@ -9,19 +9,12 @@ import XCTest
 @testable import SwiftFashion
 
 final class ProductTests: XCTestCase {
-    private var products: [Product]!
-
-    override func setUpWithError() throws {
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
-        let jsonData = try XCTUnwrap(TestData.productJSON.data(using: .utf8))
-        products = try decoder.decode([Product].self, from: jsonData)
-    }
+    private var products = MockData.products
 
     func testProductJSONCanBeDecoded() throws {
         XCTAssertEqual(products.count, 26)
 
-        let expectedProduct = TestData.tshirtProduct
+        let expectedProduct = MockData.tshirtProduct
         XCTAssertEqual(products[0].category, expectedProduct.category)
         XCTAssertEqual(products[0].name, expectedProduct.name)
         XCTAssertEqual(products[0].description, expectedProduct.description)

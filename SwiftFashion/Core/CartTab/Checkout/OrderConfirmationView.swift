@@ -83,6 +83,6 @@ extension OrderConfirmationView {
 
 struct OrderConfirmationView_Previews: PreviewProvider {
     static var previews: some View {
-        OrderConfirmationView(order: PreviewData.order)
+        OrderConfirmationView(order: MockData.createOrder())
     }
 }

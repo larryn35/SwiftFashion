@@ -9,16 +9,10 @@ import XCTest
 @testable import SwiftFashion
 
 final class OrderTests: XCTestCase {
-    private var order: Order!
-
-    override func setUpWithError() throws {
-        let decoder = JSONDecoder()
-        let jsonData = try XCTUnwrap(TestData.orderJSON.data(using: .utf8))
-        order = try decoder.decode(Order.self, from: jsonData)
-    }
+    private var order = MockData.order
 
     func testOrderSummaryJSONCanBeDecoded() throws {
-        let expectedOrder = TestData.createOrder()
+        let expectedOrder = MockData.createOrder()
 
         XCTAssertEqual(order.customerName, expectedOrder.customerName)
         XCTAssertEqual(order.email, expectedOrder.email)
@@ -37,9 +31,6 @@ final class OrderTests: XCTestCase {
 
         let expectedTotal = expectedOrder.items[0].price * expectedOrder.items[0].quantity
         let expectedSavings = expectedOrder.items[0].discount * expectedOrder.items[0].quantity
-
-        print(expectedTotal)
-        print(expectedSavings)
 
         XCTAssertEqual(order.total, expectedTotal)
         XCTAssertEqual(order.savings, expectedSavings)

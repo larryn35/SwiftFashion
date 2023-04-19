@@ -207,7 +207,7 @@ extension ProductView {
 // MARK: - Previews
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        let product = PreviewData.products()[0]
+        let product = MockData.products[0]
 
         ProductView(product: product)
             .environmentObject(CartManager())
