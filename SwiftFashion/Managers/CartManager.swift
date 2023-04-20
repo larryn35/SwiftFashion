@@ -24,7 +24,7 @@ final class CartManager: ObservableObject {
     let apiService: APIServiceProtocol
 
     init(apiService: APIServiceProtocol = APIService()) {
-        self.apiService = apiService
+        self.apiService = Config.orderUITesting() ? MockAPIService() : apiService
     }
 
     var itemCount: Int {

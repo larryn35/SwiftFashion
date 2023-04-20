@@ -18,7 +18,7 @@ final class HomeTabViewModel: ObservableObject {
     let apiService: APIServiceProtocol
 
     init(apiService: APIServiceProtocol = APIService()) {
-        self.apiService = apiService
+        self.apiService = Config.productUITesting() ? MockAPIService() : apiService
         fetchProducts()
     }
 

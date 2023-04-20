@@ -61,6 +61,8 @@
 		D1DBB96C29E642A000EB7FFA /* SortingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBB96B29E642A000EB7FFA /* SortingType.swift */; };
 		D1DBB96E29E642C300EB7FFA /* ProductGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBB96D29E642C300EB7FFA /* ProductGridLayout.swift */; };
 		D1DBB97129E6453E00EB7FFA /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBB97029E6453E00EB7FFA /* Color+Hex.swift */; };
+		D1E7151329F1045100140C9A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7151229F1045100140C9A /* Config.swift */; };
+		D1E7151429F10A9900140C9A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7151229F1045100140C9A /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +130,7 @@
 		D1DBB96B29E642A000EB7FFA /* SortingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingType.swift; sourceTree = "<group>"; };
 		D1DBB96D29E642C300EB7FFA /* ProductGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGridLayout.swift; sourceTree = "<group>"; };
 		D1DBB97029E6453E00EB7FFA /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		D1E7151229F1045100140C9A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +223,7 @@
 		D13D336329F0A50C005C2568 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				D1E7151229F1045100140C9A /* Config.swift */,
 				D1DBB95929E5E5F800EB7FFA /* MockAPIService.swift */,
 				D13D335529F09175005C2568 /* MockData.swift */,
 				D13D335729F0921A005C2568 /* Product.json */,
@@ -552,6 +556,7 @@
 				D197F08629EA361D0006909E /* CartTabView.swift in Sources */,
 				D1DBB94729E5D0CF00EB7FFA /* Order.swift in Sources */,
 				D14F750B29E8D9A60001D3CB /* ButtonStyles.swift in Sources */,
+				D1E7151329F1045100140C9A /* Config.swift in Sources */,
 				D118FEC129E1177000A8EAA2 /* ContentView.swift in Sources */,
 				D14F750529E8BD7D0001D3CB /* ProductView.swift in Sources */,
 				D197F09329EA49A20006909E /* Customer.swift in Sources */,
@@ -595,6 +600,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D118FEDA29E1177200A8EAA2 /* SwiftFashionUITests.swift in Sources */,
+				D1E7151429F10A9900140C9A /* Config.swift in Sources */,
 				D118FEDC29E1177200A8EAA2 /* SwiftFashionUITestsLaunchTests.swift in Sources */,
 				D13D336229F0A4ED005C2568 /* Bundle+Decode.swift in Sources */,
 			);
