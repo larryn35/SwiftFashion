@@ -14,10 +14,8 @@ struct Config {
     static func productUITesting() -> Bool {
 #if DEBUG
         let testing = ProcessInfo.processInfo.arguments.contains(productArgument)
-        print(">> 1. Testing:", testing)
         return testing
 #else
-        print(">> 2. Testing: False")
         return false
 #endif
     }
@@ -25,10 +23,8 @@ struct Config {
     static func orderUITesting() -> Bool {
 #if DEBUG
         let testing = ProcessInfo.processInfo.arguments.contains(orderArgument)
-        print(">> 3. Testing:", testing)
         return testing
 #else
-        print(">> 4. Testing: False")
         return false
 #endif
     }

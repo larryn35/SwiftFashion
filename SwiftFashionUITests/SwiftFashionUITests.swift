@@ -171,7 +171,7 @@ final class SwiftFashionUITests: XCTestCase {
         XCTAssert(app.buttons["Check out"].exists)
     }
 
-    func testCheckoutFailureFlow() {
+    func testServerErrorAtCheckoutShowsAlert() {
         app.launchArguments.append(Config.productArgument)
         app.launch()
 
@@ -218,6 +218,30 @@ final class SwiftFashionUITests: XCTestCase {
         app.buttons["Complete Order - $6.40"].tap()
 
         let alert = app.alerts["Sorry, we are unable to process your order right now. Please try again later."]
+        XCTAssertTrue(alert.waitForExistence(timeout: 5))
+    }
+
+    func testInvalidFormAtCheckoutShowsAlert() {
+        app.launchArguments.append(Config.productArgument)
+        app.launch()
+
+        // Tap on tank top product
+        app.collectionViews/*@START_MENU_TOKEN@*/.scrollViews/*[[".cells.scrollViews",".scrollViews"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+            .staticTexts["Tank top"]
+            .tap()
+
+        // Add to cart and dismiss product view
+        app.buttons["Add to cart"].tap()
+        app.navigationBars["Product Details"]/*@START_MENU_TOKEN@*/.buttons["Close"]/*[[".otherElements[\"Close\"].buttons[\"Close\"]",".buttons[\"Close\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+
+        // Tap on Cart tab and check out
+        app.tabBars["Tab Bar"].buttons["Cart"].tap()
+        app.buttons["Check out"].tap()
+
+        // Skip form and tap complete order
+        app.buttons["Complete Order - $6.40"].tap()
+
+        let alert = app.alerts["Please enter a valid name."]
         XCTAssertTrue(alert.waitForExistence(timeout: 5))
     }
 
