@@ -22,9 +22,12 @@ final class CartManager: ObservableObject {
     @Published var completedOrder: Order?
 
     let apiService: APIServiceProtocol
+    let validationManager: ValidationProtocol
 
-    init(apiService: APIServiceProtocol = APIService()) {
+    init(apiService: APIServiceProtocol = APIService(),
+         validationManager: ValidationProtocol = ValidationManager()) {
         self.apiService = Config.orderUITesting() ? MockAPIService() : apiService
+        self.validationManager = validationManager
     }
 
     var itemCount: Int {
@@ -124,6 +127,8 @@ final class CartManager: ObservableObject {
                           items: items)
 
         do {
+            try validationManager.validate(customer)
+
             try await Task.sleep(for: .seconds(3))
 
             let endpoint = ShoppingEndpoint.createOrder
@@ -132,6 +137,10 @@ final class CartManager: ObservableObject {
 
             cart.removeAll()
             customer = .init()
+
+        } catch let fieldError as FieldError {
+            orderError = .invalidForm(fieldError.localizedDescription)
+            showAlert = true
 
         } catch {
             orderError = .processingError

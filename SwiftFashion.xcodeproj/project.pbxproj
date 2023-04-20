@@ -63,6 +63,8 @@
 		D1DBB97129E6453E00EB7FFA /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBB97029E6453E00EB7FFA /* Color+Hex.swift */; };
 		D1E7151329F1045100140C9A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7151229F1045100140C9A /* Config.swift */; };
 		D1E7151429F10A9900140C9A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7151229F1045100140C9A /* Config.swift */; };
+		D1E7151629F10E3600140C9A /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7151529F10E3600140C9A /* ValidationManager.swift */; };
+		D1E7151829F112B300140C9A /* ValidationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7151729F112B300140C9A /* ValidationManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,8 @@
 		D1DBB96D29E642C300EB7FFA /* ProductGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGridLayout.swift; sourceTree = "<group>"; };
 		D1DBB97029E6453E00EB7FFA /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		D1E7151229F1045100140C9A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		D1E7151529F10E3600140C9A /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
+		D1E7151729F112B300140C9A /* ValidationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,7 @@
 				D19C868329E534E70033777A /* ProductTests.swift */,
 				D1DBB94A29E5D12F00EB7FFA /* OrderTests.swift */,
 				D1DBB95729E5E16E00EB7FFA /* APIServiceTests.swift */,
+				D1E7151729F112B300140C9A /* ValidationManagerTests.swift */,
 			);
 			path = SwiftFashionTests;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				D14F750C29E8EAB10001D3CB /* CartManager.swift */,
+				D1E7151529F10E3600140C9A /* ValidationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -551,6 +557,7 @@
 				D197F09529EA4BD10006909E /* PaymentButton.swift in Sources */,
 				D1DBB96E29E642C300EB7FFA /* ProductGridLayout.swift in Sources */,
 				D1DBB95229E5E0E800EB7FFA /* APIService.swift in Sources */,
+				D1E7151629F10E3600140C9A /* ValidationManager.swift in Sources */,
 				D1DBB96329E5EFFD00EB7FFA /* HomeTabView.swift in Sources */,
 				D1DBB96C29E642A000EB7FFA /* SortingType.swift in Sources */,
 				D197F08629EA361D0006909E /* CartTabView.swift in Sources */,
@@ -581,6 +588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1E7151829F112B300140C9A /* ValidationManagerTests.swift in Sources */,
 				D1CC6DC129EE2D41002CBEFF /* Strings+Generated.swift in Sources */,
 				D1DBB94B29E5D12F00EB7FFA /* OrderTests.swift in Sources */,
 				D13D336129F0A4ED005C2568 /* Bundle+Decode.swift in Sources */,

@@ -50,6 +50,18 @@ internal enum L10n {
     internal static let total = L10n.tr("Localizable", "cart.total", fallback: "Total")
   }
   internal enum Error {
+    /// Please enter a valid address.
+    internal static let invalidAddress = L10n.tr("Localizable", "error.invalidAddress", fallback: "Please enter a valid address.")
+    /// Please enter a valid city.
+    internal static let invalidCity = L10n.tr("Localizable", "error.invalidCity", fallback: "Please enter a valid city.")
+    /// Sorry, this doesn't look like a valid email.
+    internal static let invalidEmail = L10n.tr("Localizable", "error.invalidEmail", fallback: "Sorry, this doesn't look like a valid email.")
+    /// Please enter a valid name.
+    internal static let invalidName = L10n.tr("Localizable", "error.invalidName", fallback: "Please enter a valid name.")
+    /// Please enter your state as a two letter abbreviation.
+    internal static let invalidState = L10n.tr("Localizable", "error.invalidState", fallback: "Please enter your state as a two letter abbreviation.")
+    /// Please enter a valid zip code.
+    internal static let invalidZip = L10n.tr("Localizable", "error.invalidZip", fallback: "Please enter a valid zip code.")
     /// Sorry, we are unable to process your order right now. Please try again later.
     internal static let orderProcessing = L10n.tr("Localizable", "error.orderProcessing", fallback: "Sorry, we are unable to process your order right now. Please try again later.")
     /// Unable to connect to server. Please ensure that your server and database are running and try again.

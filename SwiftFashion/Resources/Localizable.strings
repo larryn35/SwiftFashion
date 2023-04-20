@@ -80,3 +80,9 @@
 // Errors
 "error.orderProcessing" = "Sorry, we are unable to process your order right now. Please try again later.";
 "error.unableToConnect" = "Unable to connect to server. Please ensure that your server and database are running and try again.";
+"error.invalidName" = "Please enter a valid name.";
+"error.invalidEmail" = "Sorry, this doesn't look like a valid email.";
+"error.invalidAddress" = "Please enter a valid address.";
+"error.invalidCity" = "Please enter a valid city.";
+"error.invalidState" = "Please enter your state as a two letter abbreviation.";
+"error.invalidZip" = "Please enter a valid zip code.";
