@@ -73,11 +73,9 @@ You should be able to run the app on your physical device.
 
 ---
 
-## Video clips
+## Demo
 
-
-![Simulator Screen Recording - iPhone 14 - 2023-04-25 at 22 12 40](https://user-images.githubusercontent.com/64430817/234475710-b2ee180a-2dd4-42d4-9e83-8822c3f1c60f.gif)
-![Simulator Screen Recording - iPhone 14 - 2023-04-25 at 22 14 44](https://user-images.githubusercontent.com/64430817/234475980-0c8aef5c-f676-4520-a61f-661b06fa604a.gif)
+https://user-images.githubusercontent.com/64430817/234716003-d9a4837a-c757-473d-b081-f9dd9671d941.mp4
 
 ---
 
