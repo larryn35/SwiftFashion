@@ -1,5 +1,7 @@
 # SwiftFashion
 
+[![iOS CI workflow](https://github.com/larryn35/SwiftFashion/actions/workflows/CI.yml/badge.svg)](https://github.com/larryn35/SwiftFashion/actions/workflows/CI.yml)
+
 ![swift-fashion](https://user-images.githubusercontent.com/64430817/234474653-514b6107-e840-4387-a5cb-7e5bffa0a6f9.png)
 
 ## About the app
