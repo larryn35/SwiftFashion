@@ -6,7 +6,7 @@
 
 ## About the app
 
-SwiftFashion is a simple iOS e-commerce app built with SwiftUI. The app uses [SFStoreKit](https://github.com/larryn35/SFStoreKit), a REST API created with Swift using Vapor, to manage the store's products and stores orders in a database. 
+SwiftFashion is a simple iOS e-commerce app built with SwiftUI. The app uses [SFStoreKit](https://github.com/larryn35/SFStoreKit), a REST API created with Swift using Vapor, to manage the store's products and store orders in a database. 
 
 The goal of this app was to learn about server-side Swift development with Vapor, as well as a playground to explore experiment with concepts and tools such as:
 - Building regular expressions with RegexBuilder
