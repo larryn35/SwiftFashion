@@ -17,6 +17,7 @@ struct SizeButtonStyle: ButtonStyle {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .foregroundColor(clothingSize == selectedSize ? Color(uiColor: .systemBackground) : .primary)
             .background(background)
+            .contentShape(Rectangle())
     }
 
     private var background: some View {
