@@ -34,6 +34,8 @@ struct ProductView: View {
                         Image(cartManager.currentOrderItem.image)
                             .resizable()
                             .scaledToFit()
+                            .frame(maxWidth: 400)
+                            .frame(maxWidth: .infinity)
 
                         if product.variants.count > 1 {
                             colorOptions
