@@ -41,7 +41,7 @@ struct HomeTabView: View {
 
                             // MARK: ProductGridView
                             ScrollView(showsIndicators: false) {
-                                ProductsGridView(layout: $selectedLayout,
+                                ProductsGridView(layout: selectedLayout,
                                                  selectedProduct: $selectedProduct,
                                                  products: viewModel.products,
                                                  category: category)
