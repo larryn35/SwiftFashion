@@ -16,7 +16,9 @@ struct SidebarView: View {
                 Section(L10n.Sidebar.categories) {
                     ForEach(ProductCategory.allCases, id: \.self) { category in
                         Text(category.rawValue)
-                            .foregroundColor(category == selectedCategory ? Color(uiColor: .systemBackground) : .primary)
+                            .foregroundColor(
+                                category == selectedCategory ?
+                                Color(uiColor: .systemBackground) : .primary)
                     }
                 }
             }
