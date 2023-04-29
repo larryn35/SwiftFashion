@@ -8,22 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var cartManager = CartManager()
+#if os(iOS)
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+#endif
 
     var body: some View {
-        TabView {
-            HomeTabView()
-                .tabItem {
-                    Label(L10n.Tab.home, systemImage: L10n.Sfs.house)
-                }
-
-            CartTabView()
-                .tabItem {
-                    Label(L10n.Tab.cart, systemImage: L10n.Sfs.cart)
-                }
+#if os(iOS)
+        if horizontalSizeClass == .compact {
+            AppTabView()
+        } else {
+            AppNavSplitView()
         }
-        .tint(.primary)
-        .environmentObject(cartManager)
+#else
+        AppNavSplitView()
+#endif
     }
 }
 

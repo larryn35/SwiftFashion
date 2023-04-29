@@ -27,6 +27,8 @@
 "button.checkOut" = "Check out";
 "button.completeOrder" = "Complete Order - ";
 "button.proccessingOrder" = "Proccessing Order";
+"button.shop" = "Shop now";
+"button.about" = "About us";
 
 // Labels
 "label.name" = "Name";
@@ -45,6 +47,13 @@
 "home.menu.gridButton" = "Grid";
 "home.menu.rowsButton" = "Rows";
 "home.menu.sortSection" = "Sort products";
+
+// SidebarView
+"sidebar.categories" = "Categories";
+
+// LandingDetailView
+"landing.title" = "Fashion at your fingertips";
+"landing.text" = "Stylish, high-quality products that are designed to last";
 
 // ProductView
 "productView.color" = "Color";
