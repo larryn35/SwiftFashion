@@ -1,5 +1,5 @@
 //
-//  HomeTabViewModel.swift
+//  HomeViewModel.swift
 //  SwiftFashion
 //
 //  Created by Larry Nguyen on 4/11/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class HomeTabViewModel: ObservableObject {
+final class HomeViewModel: ObservableObject {
     enum FetchStatus {
         case error, inProgress, success
     }

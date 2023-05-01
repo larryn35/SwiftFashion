@@ -34,6 +34,8 @@ struct ProductView: View {
                         Image(cartManager.currentOrderItem.image)
                             .resizable()
                             .scaledToFit()
+                            .frame(maxWidth: 400)
+                            .frame(maxWidth: .infinity)
 
                         if product.variants.count > 1 {
                             colorOptions
@@ -172,12 +174,14 @@ extension ProductView {
     @ViewBuilder
     var cartButton: some View {
         if cartManager.itemCount > 0 {
-            // Item in cart, show add and subtract decrement buttons
+            // Item in cart, show add and decrement item buttons
             HStack {
                 Button {
                     cartManager.decrementItem()
                 } label: {
                     Image(systemName: L10n.Sfs.minus)
+                        .symbolVariant(.circle)
+                        .foregroundColor(.red)
                 }
                 .controlSize(.large)
 
@@ -188,6 +192,8 @@ extension ProductView {
                     cartManager.addItem()
                 } label: {
                     Image(systemName: L10n.Sfs.plus)
+                        .symbolVariant(.circle)
+                        .foregroundColor(.green)
                 }
                 .controlSize(.large)
             }

@@ -16,6 +16,8 @@ internal enum L10n {
   ///   Created by Larry Nguyen on 4/10/23.
   internal static let appName = L10n.tr("Localizable", "appName", fallback: "Swift Fashion")
   internal enum Button {
+    /// About us
+    internal static let about = L10n.tr("Localizable", "button.about", fallback: "About us")
     /// Add to cart
     internal static let addToCart = L10n.tr("Localizable", "button.addToCart", fallback: "Add to cart")
     /// Cancel
@@ -34,6 +36,8 @@ internal enum L10n {
     internal static let ok = L10n.tr("Localizable", "button.ok", fallback: "OK")
     /// Proccessing Order
     internal static let proccessingOrder = L10n.tr("Localizable", "button.proccessingOrder", fallback: "Proccessing Order")
+    /// Shop now
+    internal static let shop = L10n.tr("Localizable", "button.shop", fallback: "Shop now")
     /// Try again
     internal static let tryAgain = L10n.tr("Localizable", "button.tryAgain", fallback: "Try again")
   }
@@ -92,6 +96,12 @@ internal enum L10n {
     internal static let state = L10n.tr("Localizable", "label.state", fallback: "State")
     /// Zip Code
     internal static let zip = L10n.tr("Localizable", "label.zip", fallback: "Zip Code")
+  }
+  internal enum Landing {
+    /// Stylish, high-quality products that are designed to last
+    internal static let text = L10n.tr("Localizable", "landing.text", fallback: "Stylish, high-quality products that are designed to last")
+    /// Fashion at your fingertips
+    internal static let title = L10n.tr("Localizable", "landing.title", fallback: "Fashion at your fingertips")
   }
   internal enum OrderConfirmation {
     /// Thanks for shopping with us, %@. We'll send a confirmation email when your order has shipped.
@@ -154,6 +164,10 @@ internal enum L10n {
     internal static let plus = L10n.tr("Localizable", "sfs.plus", fallback: "plus")
     /// slider.horizontal.3
     internal static let settings = L10n.tr("Localizable", "sfs.settings", fallback: "slider.horizontal.3")
+  }
+  internal enum Sidebar {
+    /// Categories
+    internal static let categories = L10n.tr("Localizable", "sidebar.categories", fallback: "Categories")
   }
   internal enum Tab {
     /// Cart

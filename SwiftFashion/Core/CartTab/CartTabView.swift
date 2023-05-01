@@ -62,6 +62,7 @@ struct CartTabView: View {
             .navigationTitle(L10n.Cart.title)
             .sheet(isPresented: $showCheckoutView, onDismiss: cartManager.clearOrder) {
                 CheckoutView()
+                    .environmentObject(cartManager)
             }
         }
     }

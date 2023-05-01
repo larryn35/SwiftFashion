@@ -36,7 +36,7 @@ struct OrderConfirmationView: View {
                 .buttonStyle(PrimaryButtonStyle())
             }
         }
-        .padding([.horizontal, .top])
+        .padding()
     }
 }
 

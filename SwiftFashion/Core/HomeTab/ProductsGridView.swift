@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct ProductsGridView: View {
-    @Binding var gridItemLayout: ProductGridLayout
     @Binding var selectedProduct: Product?
 
     let products: [Product]
+    let gridItemLayout: ProductGridLayout
 
-    init(layout: Binding<ProductGridLayout>,
+    init(layout: ProductGridLayout,
          selectedProduct: Binding<Product?>,
          products: [Product],
          category: ProductCategory) {
 
-        self._gridItemLayout = layout
+        self.gridItemLayout = layout
         self._selectedProduct = selectedProduct
 
         if category == .all {
@@ -118,7 +118,7 @@ struct ProductsGridView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ScrollView {
-                ProductsGridView(layout: .constant(.adaptive),
+                ProductsGridView(layout: .adaptive,
                                  selectedProduct: .constant(.none),
                                  products: MockData.products,
                                  category: .all)
@@ -127,7 +127,7 @@ struct ProductsGridView_Previews: PreviewProvider {
             .previewDisplayName("Adaptive layout")
 
             ScrollView {
-                ProductsGridView(layout: .constant(.flexible),
+                ProductsGridView(layout: .flexible,
                                  selectedProduct: .constant(.none),
                                  products: MockData.products,
                                  category: .all)

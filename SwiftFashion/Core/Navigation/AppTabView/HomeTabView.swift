@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeTabView: View {
-    @StateObject var viewModel = HomeTabViewModel()
+    @StateObject var viewModel = HomeViewModel()
     @State private var selectedCategory: ProductCategory = .all
     @State private var selectedLayout: ProductGridLayout = .adaptive
     @State private var selectedProduct: Product?
@@ -41,7 +41,7 @@ struct HomeTabView: View {
 
                             // MARK: ProductGridView
                             ScrollView(showsIndicators: false) {
-                                ProductsGridView(layout: $selectedLayout,
+                                ProductsGridView(layout: selectedLayout,
                                                  selectedProduct: $selectedProduct,
                                                  products: viewModel.products,
                                                  category: category)
@@ -139,7 +139,7 @@ extension HomeTabView {
 // MARK: - Previews
 
 struct HomeTabView_Previews: PreviewProvider {
-    static let viewModel = HomeTabViewModel(apiService: MockAPIService())
+    static let viewModel = HomeViewModel(apiService: MockAPIService())
 
     static var previews: some View {
         HomeTabView(viewModel: viewModel)
